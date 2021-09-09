@@ -1,0 +1,2 @@
+ruby randtilegen.rb
+pause

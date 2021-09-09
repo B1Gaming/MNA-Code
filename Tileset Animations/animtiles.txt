@@ -1,0 +1,2002 @@
+texname = ww_300.bin
+framedelays = 4, 4, 4, 4
+tilenum = 768
+tileset = 3
+
+end tile
+
+texname = ww_301.bin
+framedelays = 4, 4, 4, 4
+tilenum = 769
+tileset = 3
+
+end tile
+
+texname = ww_302.bin
+framedelays = 4, 4, 4, 4
+tilenum = 770
+tileset = 3
+
+end tile
+
+texname = ww_303.bin
+framedelays = 4, 4, 4, 4
+tilenum = 771
+tileset = 3
+
+end tile
+
+texname = ww_304.bin
+framedelays = 4, 4, 4, 4
+tilenum = 772
+tileset = 3
+
+end tile
+
+texname = ww_305.bin
+framedelays = 4, 4, 4, 4
+tilenum = 773
+tileset = 3
+
+end tile
+
+texname = ww_306.bin
+framedelays = 4, 4, 4, 4
+tilenum = 774
+tileset = 3
+
+end tile
+
+texname = ww_307.bin
+framedelays = 4, 4, 4, 4
+tilenum = 775
+tileset = 3
+
+end tile
+
+texname = ww_308.bin
+framedelays = 4, 4, 4, 4
+tilenum = 776
+tileset = 3
+
+end tile
+
+texname = ww_30B.bin
+framedelays = 4, 4, 4, 4
+tilenum = 779
+tileset = 3
+
+end tile
+
+texname = ww_310.bin
+framedelays = 4, 4, 4, 4
+tilenum = 784
+tileset = 3
+
+end tile
+
+texname = ww_311.bin
+framedelays = 4, 4, 4, 4
+tilenum = 785
+tileset = 3
+
+end tile
+
+texname = ww_312.bin
+framedelays = 4, 4, 4, 4
+tilenum = 786
+tileset = 3
+
+end tile
+
+texname = ww_313.bin
+framedelays = 4, 4, 4, 4
+tilenum = 787
+tileset = 3
+
+end tile
+
+texname = ww_314.bin
+framedelays = 4, 4, 4, 4
+tilenum = 788
+tileset = 3
+
+end tile
+
+texname = ww_319.bin
+framedelays = 4, 4, 4, 4
+tilenum = 793
+tileset = 3
+
+end tile
+
+texname = ww_31A.bin
+framedelays = 4, 4, 4, 4
+tilenum = 794
+tileset = 3
+
+end tile
+
+texname = ww_31B.bin
+framedelays = 4, 4, 4, 4
+tilenum = 795
+tileset = 3
+
+end tile
+
+texname = ww_31C.bin
+framedelays = 4, 4, 4, 4
+tilenum = 796
+tileset = 3
+
+end tile
+
+texname = ww_31D.bin
+framedelays = 4, 4, 4, 4
+tilenum = 797
+tileset = 3
+
+end tile
+
+texname = ww_31E.bin
+framedelays = 4, 4, 4, 4
+tilenum = 798
+tileset = 3
+
+end tile
+
+texname = ww_31F.bin
+framedelays = 4, 4, 4, 4
+tilenum = 799
+tileset = 3
+
+end tile
+
+texname = ww_320.bin
+framedelays = 4, 4, 4, 4
+tilenum = 800
+tileset = 3
+
+end tile
+
+texname = ww_321.bin
+framedelays = 4, 4, 4, 4
+tilenum = 801
+tileset = 3
+
+end tile
+
+texname = ww_322.bin
+framedelays = 4, 4, 4, 4
+tilenum = 802
+tileset = 3
+
+end tile
+
+texname = ww_32A.bin
+framedelays = 4, 4, 4, 4
+tilenum = 810
+tileset = 3
+
+end tile
+
+texname = ww_339.bin
+framedelays = 4, 4, 4, 4
+tilenum = 825
+tileset = 3
+
+end tile
+
+texname = ww_33A.bin
+framedelays = 4, 4, 4, 4
+tilenum = 826
+tileset = 3
+
+end tile
+
+texname = ww_33B.bin
+framedelays = 4, 4, 4, 4
+tilenum = 827
+tileset = 3
+
+end tile
+
+texname = ww_33C.bin
+framedelays = 4, 4, 4, 4
+tilenum = 828
+tileset = 3
+
+end tile
+
+texname = ww_33D.bin
+framedelays = 4, 4, 4, 4
+tilenum = 829
+tileset = 3
+
+end tile
+
+texname = ww_33E.bin
+framedelays = 4, 4, 4, 4
+tilenum = 830
+tileset = 3
+
+end tile
+
+texname = ww_33F.bin
+framedelays = 4, 4, 4, 4
+tilenum = 831
+tileset = 3
+
+end tile
+
+texname = fz_300.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 768
+tileset = 3
+
+end tile
+
+texname = fz_301.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 769
+tileset = 3
+
+end tile
+
+texname = fz_302.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 770
+tileset = 3
+
+end tile
+
+texname = fz_303.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 771
+tileset = 3
+
+end tile
+
+texname = fz_304.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 772
+tileset = 3
+
+end tile
+
+texname = fz_305.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 773
+tileset = 3
+
+end tile
+
+texname = fz_306.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 774
+tileset = 3
+
+end tile
+
+texname = fz_307.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 775
+tileset = 3
+
+end tile
+
+texname = fz_308.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 776
+tileset = 3
+
+end tile
+
+texname = fz_309.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 777
+tileset = 3
+
+end tile
+
+texname = fz_30A.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 778
+tileset = 3
+
+end tile
+
+texname = fz_30B.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 779
+tileset = 3
+
+end tile
+
+texname = fz_30C.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 780
+tileset = 3
+
+end tile
+
+texname = fz_310.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 784
+tileset = 3
+
+end tile
+
+texname = fz_311.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 785
+tileset = 3
+
+end tile
+
+texname = fz_312.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 786
+tileset = 3
+
+end tile
+
+texname = fz_313.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 787
+tileset = 3
+
+end tile
+
+texname = fz_314.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 788
+tileset = 3
+
+end tile
+
+texname = fz_315.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 789
+tileset = 3
+
+end tile
+
+texname = fz_316.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 790
+tileset = 3
+
+end tile
+
+texname = fz_317.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 791
+tileset = 3
+
+end tile
+
+texname = fz_318.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 792
+tileset = 3
+
+end tile
+
+texname = fz_319.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 793
+tileset = 3
+
+end tile
+
+texname = fz_31A.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 794
+tileset = 3
+
+end tile
+
+texname = fz_31B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 795
+tileset = 3
+
+end tile
+
+texname = fz_31C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 796
+tileset = 3
+
+end tile
+
+texname = fz_320.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 800
+tileset = 3
+
+end tile
+
+texname = fz_321.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 801
+tileset = 3
+
+end tile
+
+texname = fz_322.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 802
+tileset = 3
+
+end tile
+
+texname = fz_323.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 803
+tileset = 3
+
+end tile
+
+texname = fz_324.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 804
+tileset = 3
+
+end tile
+
+texname = fz_325.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 805
+tileset = 3
+
+end tile
+
+texname = fz_32A.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 810
+tileset = 3
+
+end tile
+
+texname = fz_32B.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 811
+tileset = 3
+
+end tile
+
+texname = fz_32C.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 812
+tileset = 3
+
+end tile
+
+texname = g_30A.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 778
+tileset = 3
+
+end tile
+
+texname = g_30B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 779
+tileset = 3
+
+end tile
+
+texname = g_30C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 780
+tileset = 3
+
+end tile
+
+texname = g_30D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 781
+tileset = 3
+
+end tile
+
+texname = g_31A.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 794
+tileset = 3
+
+end tile
+
+texname = g_31B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 795
+tileset = 3
+
+end tile
+
+texname = g_31C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 796
+tileset = 3
+
+end tile
+
+texname = g_31D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 797
+tileset = 3
+
+end tile
+
+texname = g_32C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 812
+tileset = 3
+
+end tile
+
+texname = g_32D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 813
+tileset = 3
+
+end tile
+
+texname = g_33C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 828
+tileset = 3
+
+end tile
+
+texname = g_33D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 829
+tileset = 3
+
+end tile
+
+texname = g_34D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 845
+tileset = 3
+
+end tile
+
+texname = g_34E.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 846
+tileset = 3
+
+end tile
+
+texname = g_34F.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 847
+tileset = 3
+
+end tile
+
+texname = g_35D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 861
+tileset = 3
+
+end tile
+
+texname = g_35E.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 862
+tileset = 3
+
+end tile
+
+texname = g_35F.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 863
+tileset = 3
+
+end tile
+
+texname = g_36D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 877
+tileset = 3
+
+end tile
+
+texname = g_36E.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 878
+tileset = 3
+
+end tile
+
+texname = g_36F.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 879
+tileset = 3
+
+end tile
+
+texname = g_30A.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 810
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_30B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 811
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_30C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 782
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_30D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 783
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_31A.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 826
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_31B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 827
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_31C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 798
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_31D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 799
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_32C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 814
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_32D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 815
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_33C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 830
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_33D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 831
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_34D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 842
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_34E.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 843
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_34F.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 844
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_35D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 858
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_35E.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 859
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_35F.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 860
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_36D.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 874
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_36E.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 875
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_36F.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 876
+tileset = 3
+reverse = yes
+
+end tile
+
+texname = g_306.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 774
+tileset = 3
+
+end tile
+
+texname = g_307.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 775
+tileset = 3
+
+end tile
+
+texname = g_316.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 790
+tileset = 3
+
+end tile
+
+texname = g_317.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 791
+tileset = 3
+
+end tile
+
+texname = g_326.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 806
+tileset = 3
+
+end tile
+
+texname = g_327.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 807
+tileset = 3
+
+end tile
+
+texname = g_336.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 822
+tileset = 3
+
+end tile
+
+texname = g_337.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 823
+tileset = 3
+
+end tile
+
+texname = g_37A.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 890
+tileset = 3
+
+end tile
+
+texname = g_37B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 891
+tileset = 3
+
+end tile
+
+texname = g_37C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 906
+tileset = 3
+
+end tile
+
+texname = g_38B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 907
+tileset = 3
+
+end tile
+
+texname = g_306.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 776
+tileset = 3
+
+end tile
+
+texname = g_307.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 777
+tileset = 3
+
+end tile
+
+texname = g_316.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 792
+tileset = 3
+
+end tile
+
+texname = g_317.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 793
+tileset = 3
+
+end tile
+
+texname = g_326.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 808
+tileset = 3
+
+end tile
+
+texname = g_327.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 809
+tileset = 3
+
+end tile
+
+texname = g_336.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 824
+tileset = 3
+
+end tile
+
+texname = g_337.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 825
+tileset = 3
+
+end tile
+
+texname = g_37A.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 922
+tileset = 3
+
+end tile
+
+texname = g_37B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 923
+tileset = 3
+
+end tile
+
+texname = g_37C.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 938
+tileset = 3
+
+end tile
+
+texname = g_38B.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 939
+tileset = 3
+
+end tile
+
+texname = fz_336.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 822
+tileset = 3
+
+end tile
+
+texname = fz_337.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 823
+tileset = 3
+
+end tile
+
+texname = fz_338.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 824
+tileset = 3
+
+end tile
+
+texname = fz_346.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 838
+tileset = 3
+
+end tile
+
+texname = fz_347.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 839
+tileset = 3
+
+end tile
+
+texname = fz_349.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 841
+tileset = 3
+
+end tile
+
+texname = fz_34A.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 842
+tileset = 3
+
+end tile
+
+texname = fz_34C.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 844
+tileset = 3
+
+end tile
+
+texname = fz_34D.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 845
+tileset = 3
+
+end tile
+
+texname = fz_357.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 855
+tileset = 3
+
+end tile
+
+texname = fz_358.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 856
+tileset = 3
+
+end tile
+
+texname = fz_359.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 857
+tileset = 3
+
+end tile
+
+texname = fz_35A.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 858
+tileset = 3
+
+end tile
+
+texname = fz_35B.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 859
+tileset = 3
+
+end tile
+
+texname = fz_35C.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 860
+tileset = 3
+
+end tile
+
+texname = fz_348.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 840
+tileset = 3
+
+end tile
+
+texname = fz_34B.bin
+framedelays = 6, 6, 6, 6, 6
+tilenum = 843
+tileset = 3
+
+end tile
+
+texname = m_1B0.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6
+tilenum = 432
+tileset = 1
+
+end tile
+
+texname = m_1B1.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6
+tilenum = 433
+tileset = 1
+
+end tile
+
+texname = m_1B2.bin
+framedelays = 6, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6
+tilenum = 434
+tileset = 1
+
+end tile
+
+texname = m_1D0.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6
+tilenum = 464
+tileset = 1
+
+end tile
+
+texname = m_1D1.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6
+tilenum = 465
+tileset = 1
+
+end tile
+
+texname = m_1D2.bin
+framedelays = 6, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6
+tilenum = 466
+tileset = 1
+
+end tile
+
+texname = m_1B0.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6
+tilenum = 448
+tileset = 1
+
+end tile
+
+texname = m_1B1.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6
+tilenum = 449
+tileset = 1
+
+end tile
+
+texname = m_1B2.bin
+framedelays = 6, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6
+tilenum = 450
+tileset = 1
+
+end tile
+
+texname = m_1D0.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6
+tilenum = 480
+tileset = 1
+
+end tile
+
+texname = m_1D1.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6
+tilenum = 481
+tileset = 1
+
+end tile
+
+texname = m_1D2.bin
+framedelays = 6, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6
+tilenum = 482
+tileset = 1
+
+end tile
+
+texname = cc_19b.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 411
+tileset = 1
+
+end tile
+
+texname = cc_19c.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 412
+tileset = 1
+
+end tile
+
+texname = cc_19d.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 413
+tileset = 1
+
+end tile
+
+texname = cc_19e.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 414
+tileset = 1
+
+end tile
+
+texname = cc_1b4.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 436
+tileset = 1
+
+end tile
+
+texname = cc_1b5.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 437
+tileset = 1
+
+end tile
+
+texname = cc_1b6.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 438
+tileset = 1
+
+end tile
+
+texname = cc_1b7.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 439
+tileset = 1
+
+end tile
+
+texname = cc_1b8.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 440
+tileset = 1
+
+end tile
+
+texname = cc_1b9.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 441
+tileset = 1
+
+end tile
+
+texname = cc_1c5.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 453
+tileset = 1
+
+end tile
+
+texname = cc_1c7.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 455
+tileset = 1
+
+end tile
+
+texname = cc_1c8.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 456
+tileset = 1
+
+end tile
+
+texname = cc_1d4.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 468
+tileset = 1
+
+end tile
+
+texname = cc_1d5.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 469
+tileset = 1
+
+end tile
+
+texname = cc_1d6.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 470
+tileset = 1
+
+end tile
+
+texname = cc_1d7.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 471
+tileset = 1
+
+end tile
+
+texname = cc_1d8.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 472
+tileset = 1
+
+end tile
+
+texname = cc_1d9.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 473
+tileset = 1
+
+end tile
+
+texname = cc_1e4.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 484
+tileset = 1
+
+end tile
+
+texname = cc_1e5.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 485
+tileset = 1
+
+end tile
+
+texname = cc_1aa.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 426
+tileset = 1
+
+end tile
+
+texname = cc_1e6.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 486
+tileset = 1
+
+end tile
+
+texname = cc_1ab.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 427
+tileset = 1
+
+end tile
+
+texname = cc_1e7.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 487
+tileset = 1
+
+end tile
+
+texname = cc_1e8.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 488
+tileset = 1
+
+end tile
+
+texname = cc_1ad.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 429
+tileset = 1
+
+end tile
+
+texname = cc_1e9.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 489
+tileset = 1
+
+end tile
+
+texname = cc_1ae.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 430
+tileset = 1
+
+end tile
+
+texname = cc_1f4.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 500
+tileset = 1
+
+end tile
+
+texname = cc_1f5.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 501
+tileset = 1
+
+end tile
+
+texname = cc_1ba.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 442
+tileset = 1
+
+end tile
+
+texname = cc_1f6.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 502
+tileset = 1
+
+end tile
+
+texname = cc_1bb.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 443
+tileset = 1
+
+end tile
+
+texname = cc_1bc.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 444
+tileset = 1
+
+end tile
+
+texname = cc_1f8.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 504
+tileset = 1
+
+end tile
+
+texname = cc_1bd.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 445
+tileset = 1
+
+end tile
+
+texname = cc_1ca.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 458
+tileset = 1
+
+end tile
+
+texname = cc_1cb.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 459
+tileset = 1
+
+end tile
+
+texname = cc_1cc.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 460
+tileset = 1
+
+end tile
+
+texname = cc_1cd.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 461
+tileset = 1
+
+end tile
+
+texname = cc_1ea.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 490
+tileset = 1
+
+end tile
+
+texname = cc_1eb.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 491
+tileset = 1
+
+end tile
+
+texname = cc_1ec.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 492
+tileset = 1
+
+end tile
+
+texname = cc_1ed.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 493
+tileset = 1
+
+end tile
+
+texname = cc_1ee.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 494
+tileset = 1
+
+end tile
+
+texname = cc_1ef.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 495
+tileset = 1
+
+end tile
+
+texname = cc_1fa.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 506
+tileset = 1
+
+end tile
+
+texname = cc_1fb.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 507
+tileset = 1
+
+end tile
+
+texname = cc_1fc.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 508
+tileset = 1
+
+end tile
+
+texname = cc_1fd.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 509
+tileset = 1
+
+end tile
+
+texname = cc_1fe.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 510
+tileset = 1
+
+end tile
+
+texname = cc_1ff.bin
+framedelays = 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+tilenum = 511
+tileset = 1
+
+end tile
+
+texname = xd_234.bin
+framedelays = 1, 1, 1, 1, 1
+tilenum = 564
+tileset = 2
+
+end tile
+
+texname = xd_235.bin
+framedelays = 1, 1, 1, 1, 1
+tilenum = 565
+tileset = 2
+
+end tile
+
+texname = xd_244.bin
+framedelays = 1, 1, 1, 1, 1
+tilenum = 580
+tileset = 2
+
+end tile
+
+texname = xd_245.bin
+framedelays = 1, 1, 1, 1, 1
+tilenum = 581
+tileset = 2
+
+end tile
+
+texname = t_190.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 400
+tileset = 1
+
+end tile
+
+texname = t_191.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 401
+tileset = 1
+
+end tile
+
+texname = t_192.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 402
+tileset = 1
+
+end tile
+
+texname = t_193.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 403
+tileset = 1
+
+end tile
+
+texname = t_194.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 404
+tileset = 1
+
+end tile
+
+texname = t_195.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 405
+tileset = 1
+
+end tile
+
+texname = t_1a0.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 416
+tileset = 1
+
+end tile
+
+texname = t_1a1.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 417
+tileset = 1
+
+end tile
+
+texname = t_1a2.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 418
+tileset = 1
+
+end tile
+
+texname = t_1a3.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 419
+tileset = 1
+
+end tile
+
+texname = t_1a4.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 420
+tileset = 1
+
+end tile
+
+texname = t_1a5.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 421
+tileset = 1
+
+end tile
+
+texname = t_1e0.bin
+framedelays = 4, 4, 4, 4
+tilenum = 480
+tileset = 1
+
+end tile
+
+texname = t_1e1.bin
+framedelays = 4, 4, 4, 4
+tilenum = 481
+tileset = 1
+
+end tile
+
+texname = t_1e2.bin
+framedelays = 4, 4, 4, 4
+tilenum = 482
+tileset = 1
+
+end tile
+
+texname = t_1e3.bin
+framedelays = 4, 4, 4, 4
+tilenum = 483
+tileset = 1
+
+end tile
+
+texname = t_1f0.bin
+framedelays = 4, 4, 4, 4
+tilenum = 496
+tileset = 1
+
+end tile
+
+texname = t_1f1.bin
+framedelays = 4, 4, 4, 4
+tilenum = 497
+tileset = 1
+
+end tile
+
+texname = t_1f2.bin
+framedelays = 4, 4, 4, 4
+tilenum = 498
+tileset = 1
+
+end tile
+
+texname = t_1f3.bin
+framedelays = 4, 4, 4, 4
+tilenum = 499
+tileset = 1
+
+end tile
+
+texname = r_302.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 770
+tileset = 3
+
+end tile
+
+texname = r_303.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 771
+tileset = 3
+
+end tile
+
+texname = r_304.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 772
+tileset = 3
+
+end tile
+
+texname = r_305.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 773
+tileset = 3
+
+end tile
+
+texname = r_306.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 774
+tileset = 3
+
+end tile
+
+texname = r_307.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 775
+tileset = 3
+
+end tile
+
+texname = r_312.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 786
+tileset = 3
+
+end tile
+
+texname = r_313.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 787
+tileset = 3
+
+end tile
+
+texname = r_314.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 788
+tileset = 3
+
+end tile
+
+texname = r_315.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 789
+tileset = 3
+
+end tile
+
+texname = r_316.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 790
+tileset = 3
+
+end tile
+
+texname = r_317.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 791
+tileset = 3
+
+end tile
+
+texname = r_322.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 802
+tileset = 3
+
+end tile
+
+texname = r_323.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 803
+tileset = 3
+
+end tile
+
+texname = r_324.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 804
+tileset = 3
+
+end tile
+
+texname = r_325.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 805
+tileset = 3
+
+end tile
+
+texname = r_326.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 806
+tileset = 3
+
+end tile
+
+texname = r_327.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 807
+tileset = 3
+
+end tile
+
+texname = r_332.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 818
+tileset = 3
+
+end tile
+
+texname = r_333.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 819
+tileset = 3
+
+end tile
+
+texname = r_334.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 820
+tileset = 3
+
+end tile
+
+texname = r_335.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 821
+tileset = 3
+
+end tile
+
+texname = r_336.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 822
+tileset = 3
+
+end tile
+
+texname = r_337.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 823
+tileset = 3
+
+end tile
+
+texname = r_33E.bin
+framedelays = 4, 4, 4, 4, 4, 4
+tilenum = 830
+tileset = 3
+
+end tile
+
+texname = flowr_no_b.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 434
+tileset = 1
+
+end tile
+
+texname = flowr_no_bb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 450
+tileset = 1
+
+end tile
+
+texname = flowr_no_r.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 433
+tileset = 1
+
+end tile
+
+texname = flowr_no_rb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 449
+tileset = 1
+
+end tile
+
+texname = flowr_no_y.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 432
+tileset = 1
+
+end tile
+
+texname = flowr_no_yb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 448
+tileset = 1
+
+end tile
+
+texname = flowr_ko_b.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 434
+tileset = 1
+
+end tile
+
+texname = flowr_ko_bb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 450
+tileset = 1
+
+end tile
+
+texname = flowr_ko_r.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 433
+tileset = 1
+
+end tile
+
+texname = flowr_ko_rb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 449
+tileset = 1
+
+end tile
+
+texname = flowr_ko_p.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 432
+tileset = 1
+
+end tile
+
+texname = flowr_ko_pb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 448
+tileset = 1
+
+end tile
+
+texname = flowr_da_p.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 434
+tileset = 1
+
+end tile
+
+texname = flowr_da_pb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 450
+tileset = 1
+
+end tile
+
+texname = flowr_da_r.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 433
+tileset = 1
+
+end tile
+
+texname = flowr_da_rb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 449
+tileset = 1
+
+end tile
+
+texname = flowr_da_b.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 432
+tileset = 1
+
+end tile
+
+texname = flowr_da_bb.bin
+framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
+tilenum = 448
+tileset = 1
+
+end tile
+

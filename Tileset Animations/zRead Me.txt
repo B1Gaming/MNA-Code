@@ -1,0 +1,97 @@
+First, you should read this thread to understand a bit about tileset animation stuff
+https://horizonwii.github.io/horizonwii.net/index9053.html?page=thread&id=196
+
+Open Pa0_jyotyu.arc and extract block_anime.bin. Open the bin in a hex editor.
+Insert the brick block header below at the beginning of the file. Then save and close.
+00 20 AF 30 00 00 00 01 00 00 00 0C 00 00 00 14
+00 00 00 00 00 80 00 20 00 00 00 05 00 00 00 40
+00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Rename it to "block_anime.tpl" and open it in Brawlbox. Export the image, and edit it
+
+Dimensions of the images used in tile animations are 32 by 32(x)
+x represents the number of frames in the tile animation
+If there are 4 frames in the animation, then the dimensions of the image would be 32x128.
+
+Also, the box of each animation frame is 32x32. But only the center of the box
+is read by the game. The center is 24x24.
+
+Once your done with the tileset animation, replace the image of block_anime.tpl and save.
+Drag the tpl on tplrem.py to remove the header.
+Rename the tpl to "Anything_That's_Not_In_AnimTiles".bin
+(For example, danster_anim.bin)
+
+Now open your custom tileset in SZS Explorer.
+Add the bin file in the "BG_tex" folder. Save and quit.
+
+These are some tpl headers you can use for some stuff:
+
+Brick Block header (4 images, 32x128)
+00 20 AF 30 00 00 00 01 00 00 00 0C 00 00 00 14
+00 00 00 00 00 80 00 20 00 00 00 05 00 00 00 40
+00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Question Block header (16 images, 32x512)
+00 20 AF 30 00 00 00 01 00 00 00 0C 00 00 00 14
+00 00 00 00 02 00 00 20 00 00 00 05 00 00 00 40
+00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Coin Outline header (8 images, 32x256)
+00 20 AF 30 00 00 00 01 00 00 00 0C 00 00 00 14
+00 00 00 00 01 00 00 20 00 00 00 05 00 00 00 40
+00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Okay, open the animtiles.txt
+Copy the example below, paste it at the end of the txt file, and edit it:
+------------------------
+texname = REEEE.bin
+framedelays = 4, 4, 4, 4
+tilenum = 0x123
+tileset = 0
+
+end tile
+------------------------
+
+texname: The name of the bin file.
+
+framedelays: The number of frame delay between each... frame.
+
+tilenum: The tileset number, the row of the tile, and the column of the tile.
+In the example, 0x123 means [Pa0; row 3; column 4]
+It's a Pa0 tileset
+
+By the way, each tileset has 16 rows (0-F) and 16 columns (0-F)
+This is how tilenum works in Hex, anyways.
+
+tileset: The Pa slot the tileset is part of. (Pa0 = 0, Pa1 = 1, etc)
+
+The maximum amount of frames an animation can take it 255 or 256.
+
+
+When you're done, save, and use the "txt to bin" bat file
+Alright that's it
+
+=====================================
+Tileset Animation misc info/gibberish
+=====================================
+60 frames is probably 1 second
+When doing tilenum in hexadecimal, make sure to add 0x to begin it
+You can also use integers, but, like, don't
+
+(According to CLF78 and Zementblock) Here are some animation values:
+Brick Blocks = 50, 6, 6, 6
+Question Blocks = 3 framedelays each
+
+tileset = 1 is equivalent to Pa1
+
+tilenum = 0x234        [tileset 2; row 3; column 4]
+tilenum = location on tileset
+0x100 = Row 0, Column 0
+0x101 = Row 0, Columnn 1
+0x110 = Row 1, Column 0
+0x111 = Row 1, Column 1
+etc
