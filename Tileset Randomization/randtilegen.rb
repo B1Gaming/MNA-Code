@@ -165,10 +165,10 @@ g.section('TestTileset') do
 end
 
 regular_ts1 = %w(suichu)
-regular_ts1 += %w(dokan_naibu nohara2 obake_soto2 shiro_koopa)
-regular_ts2 = %w(doukutu doukutu2 doukutu3 doukutu4 doukutu5 doukutu6 doukutu7)
-newer = %w(Pa1_magicsnow Pa1_suichu_lightblue Pa1_supesu Pa1_totemu)
-newer += %w(Pa2_doukutupumpkin Pa2_volcanobg)
+regular_ts1 += %w(dokan_naibu nohara2 shiro_koopa)
+regular_ts2 = %w(doukutu doukutu2 doukutu3 doukutu4 doukutu5 doukutu6 doukutu7 doukutu8)
+newer = %w(Pa1_supesu Pa1_totemu)
+newer += %w(none)
 
 regular_ts1.map!{ |x| "Pa1_#{x}" }
 regular_ts2.map!{ |x| "Pa2_#{x}" }
@@ -183,10 +183,10 @@ g.section(*nohara_clones.map{ |x| "Pa1_#{x}"}) do
 end
 
 g.section('Pa1_aki') do
-	g.random(0x02..0x07, :horz_vdouble_top)
+	g.random(0x2..0x7, :horz_vdouble_top)
 	g.random(0x12..0x17, :horz_vdouble_bottom)
 	g.random(0x22..0x27)
-	g.random(0x32..0x37, :horz)
+	g.random(0x32..0x37)
 	g.random([0x20, 0x30, 0x40, 0x50], :vert)
 	g.random([0x21, 0x31, 0x41, 0x51], :vert)
 end
@@ -235,16 +235,6 @@ g.section('Pa1_gake_yougan') do
 	g.random([0x71, 0x81, 0x91, 0xA1], :vert)
 end
 
-g.section('Pa1_graveyard', 'Pa3_graveyars', 'Pa3_graveyard') do
-	g.regular_terrain
-	g.random(0x19..0x1E, :horz)
-end
-
-g.section('Pa1_kabocha') do
-	g.regular_terrain
-	g.random(0x17..0x19, :horz)	
-end
-
 g.section('Pa1_kaigan', 'Pa1_kaigan_taiyo') do
 	g.regular_terrain
 	g.random(0x18..0x1B)
@@ -265,16 +255,6 @@ g.section('Pa1_korichika') do
 	g.random(0xBA..0xBF, :horz)
 	g.random([0xB8, 0xC8, 0xD8, 0xE8], :vert)
 	g.random([0xB9, 0xC9, 0xD9, 0xE9], :vert)
-end
-
-g.section('Pa1_lavaglow') do
-	g.random([0x20, 0x30, 0x40, 0x50], :vert)
-	g.random([0x21, 0x31, 0x41, 0x51], :vert)
-	g.random(0x2..0x7, :horz_vdouble_top)
-	g.random(0x12..0x17, :horz_vdouble_bottom)
-	g.random(0x22..0x27)
-	g.random(0x32..0x37, :horz)
-	g.random(0x28..0x2D, :horz)
 end
 
 g.section('Pa1_obake_soto') do
@@ -333,22 +313,13 @@ g.section('Pa1_shiro_sora') do
 	g.random(0x1B..0x1E)
 end
 
-g.section('Pa1_shiro_aki', 'Pa1_shiro_suichu', 'Pa1_snowfort') do
+g.section('Pa1_shiro_aki', 'Pa1_shiro_taiyo') do
 	g.regular_terrain
 	g.random([0xBC, 0xBD, 0xBE, 0xCC, 0xCD, 0xCE, 0xDC, 0xDD, 0xDE, 0xEC, 0xED, 0xEE])
 	g.random([0xB9, 0xC9, 0xD9, 0xE9], :vert)
 	g.random([0xBA, 0xCA, 0xDA, 0xEA], :vert)
 	g.random(0x18..0x1F, :horz)
 	g.random(0x48..0x4F, :horz)
-end
-
-g.section('Pa2_autumn4', 'Pa3_yoshiforest') do
-	g.random([0x06, 0x06, 0x06, 0x06, 0x07, 0x08], :horz)
-	g.random([0x09, 0x09, 0x09, 0x09, 0x0A, 0x0B], :horz)
-	g.random([0x0D, 0x0D, 0x0D, 0x0D, 0x0E, 0x0F], :horz)
-	g.random([0x28, 0x28, 0x28, 0x28, 0x38, 0x48], :vert)
-	g.random([0x2B, 0x2B, 0x2B, 0x2B, 0x3B, 0x4B], :vert)
-	g.random([0x2F, 0x2F, 0x2F, 0x2F, 0x3F, 0x4F], :vert)
 end
 
 g.section('Pa2_gake', 'Pa2_gake_setsugen') do

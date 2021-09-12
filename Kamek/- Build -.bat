@@ -11,7 +11,7 @@ pause
 exit
 
 :move
-move "%~dp0\NewerASM\*.bin" E:\NSMBW Modding\NewerDolphin\MNA_FILES\files\NewerRes >nul
+move "%~dp0\NewerASM\*.bin" "E:\NSMBW Modding\NewerDolphin\MNA_FILES\files\NewerRes" >nul
 if %errorlevel%==0 goto end
 pause
 exit
