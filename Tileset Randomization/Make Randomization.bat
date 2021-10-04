@@ -1,2 +1,2 @@
-ruby randtilegen.rb
+python randtilegen.py
 pause
