@@ -1868,6 +1868,8 @@ SECTIONS {
 	loc_80AA86FC = 2158657564;
 	doSomethingElseWithTravelInfoBuffer__10SnakeSubExFv = 2158652672;/*mi*/
 
+	returnFromAirshipCloudsNotGood = 2157827924;
+	returnFromAirshipCloudsIsGood = 2157827912;
 
 
 	.text : {

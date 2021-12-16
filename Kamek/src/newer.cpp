@@ -90,6 +90,7 @@ void getNewerLevelNumberString(int world, int level, wchar_t *dest) {
 		L"\x0B\x0152\xBEEF", // 40, blue switch palace
 		L"\x0B\x0153\xBEEF", // 41, yellow switch palace
 		L"\x0B\x0154\xBEEF", // 42, green switch palace
+        L"\x0B\x0130\xBEEF", // 43, ghost house
 	};
 
 	dest[0] = (world >= 10) ? (world-10+'A') : (world+'0');

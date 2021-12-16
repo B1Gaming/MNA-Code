@@ -209,10 +209,10 @@ s.add_range(21, 24).mode_none()
 s.add_range(250, 255).mode_vert().set_target_range(0, 5)
 
 regular_ts1 = 'suichu'.split(' ')
-regular_ts1 += 'dokan_naibu nohara2 shiro_koopa obake_soto'.split(' ')
+regular_ts1 += 'dokan_naibu nohara2 obake_soto'.split(' ')
 regular_ts1 = ['Pa1_' + x for x in regular_ts1]
 
-regular_ts2 = 'doukutu doukutu2 doukutu3 doukutu4 doukutu5 doukutu6 doukutu7 doukutu8'.split(' ')
+regular_ts2 = 'doukutu doukutu2 doukutu3 doukutu4 doukutu5 doukutu6 doukutu7 doukutu8 doukutu9'.split(' ')
 regular_ts2 = ['Pa2_' + x for x in regular_ts2]
 
 newer = 'Pa1_supesu'.split(' ')
@@ -232,7 +232,7 @@ s.add_range(0x12, 0x17).vdouble_bottom()
 s.add_range(0x22, 0x27)
 s.add_range(0x32, 0x37).mode_horz()
 s.add_tile(0x20, 0x30, 0x40, 0x50).mode_vert()
-s.add_tile(0x20, 0x30, 0x40, 0x50).mode_vert()
+s.add_tile(0x21, 0x31, 0x41, 0x51).mode_vert()
 
 s = g.section('Pa1_chika', 'Pa1_sabaku_chika', 'Pa1_kurayami_chika', 'Pa1_kurisutaru_chika')
 s.add_regular_terrain()
@@ -307,7 +307,7 @@ s.add_range(0x12, 0x17)
 s.add_range(0x22, 0x27).mode_horz()
 s.add_tile(0x10, 0x20, 0x30, 0x40).mode_vert()
 s.add_tile(0x11, 0x21, 0x31, 0x41).mode_vert()
-s.add_range(0x08, 0x0F).mode_horz()
+s.add_range(0x0A, 0x0F).mode_horz()
 
 s = g.section('Pa1_sakura')
 s.add_regular_terrain()
@@ -326,7 +326,7 @@ s.add_range(0x3A, 0x3F).mode_horz()
 s.add_tile(0x28, 0x38, 0x48, 0x58).mode_vert()
 s.add_tile(0x29, 0x39, 0x49, 0x59).mode_vert()
 
-s = g.section('Pa1_shiro_aki', 'Pa1_shiro_taiyo')
+s = g.section('Pa1_shiro_aki', 'Pa1_shiro_soto', 'Pa1_shiro_taiyo')
 s.add_regular_terrain()
 s.add_tile(0xBC, 0xBD, 0xBE, 0xCC, 0xCD, 0xCE, 0xDC, 0xDD, 0xDE, 0xEC, 0xED, 0xEE)
 s.add_tile(0xB9, 0xC9, 0xD9, 0xE9).mode_vert()
@@ -336,6 +336,10 @@ s.add_range(0x48, 0x4F).mode_horz()
 
 s = g.section('Pa1_shiro_boss1')
 s.add_regular_terrain()
+
+s = g.section('Pa1_shiro_koopa')
+s.add_regular_terrain()
+s.add_tile(0xDC, 0xDD, 0xDE, 0xDF, 0xED, 0xEE, 0xEF, 0xFD, 0xFE, 0xFF, 0x4A, 0x5A, 0x6A, 0x7A, 0x8A, 0x9A)
 
 s = g.section('Pa1_shiro_sora')
 s.add_regular_terrain()
@@ -358,7 +362,7 @@ s.add_regular_terrain()
 s.add_range(0xA0, 0xA5).mode_horz()
 s.add_range(0xB0, 0xB5).mode_horz()
 
-s = g.section('Pa2_toride', 'Pa2_toride_kori', 'Pa2_toride_sabaku', 'Pa2_toride_soto', 'Pa2_toride_yougan')
+s = g.section('Pa2_toride', 'Pa2_toride_kori', 'Pa2_toride_sabaku', 'Pa2_toride_soto', 'Pa2_toride_yogan')
 s.add_range(0x02, 0x07).mode_horz()
 s.add_range(0x12, 0x17).mode_horz()
 s.add_range(0x22, 0x27)

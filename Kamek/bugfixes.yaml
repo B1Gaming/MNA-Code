@@ -31,16 +31,18 @@ hooks:
     type: patch
     addr_pal: 0x809CB118
     data: '2C1C0003'
-  - name: DisableTerrainShading
-    type: patch
-    addr_pal: 0x8008E6F8
-    data: '38600000'
+
+#  - name: DisableTerrainShading
+#    type: patch
+#    addr_pal: 0x8008E6F8
+#    data: '38600000'
 
   - name: TitleScreenFucker
     type: branch_insn
     branch_type: bl
     src_addr_pal: 0x8010191C
     target_func: 'TitleScreenFucker'
+    
   - name: AnotherTSThing
     type: patch
     addr_pal: 0x8015D850
@@ -55,13 +57,18 @@ hooks:
     type: nop_insn
     area_pal: 0x80781FB8
 
+  - name: NoTitleScreenreplay
+    type: patch
+    addr_pal: 0x80781FBC
+    data: '38600000'
+
+#This one disables the player freezing and doing the grow animation
+#skawo didn't like it
 #  - name: MPPauseFix1
 #    type: branch_insn
 #    branch_type: bl
 #    target_func: 'mpPauseFix1'
 #    src_addr_pal: 0x801410C4
-#This one disables the player freezing and doing the grow animation
-#skawo didn't like it
 #  - name: MPPauseFix2
 #    type: branch_insn
 #    branch_type: bl
@@ -87,39 +94,41 @@ hooks:
     addr_pal: 0x800E53E0
     data: '4E800020'
 
-  - name: ClimbSounds
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80132EFC
-    target_func: 'newClimbSounds'
+#  - name: ClimbSounds
+#    type: branch_insn
+#    branch_type: bl
+#    src_addr_pal: 0x80132EFC
+#    target_func: 'newClimbSounds'
 
-  - name: ClimbSoundsJumpS
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80133120
-    target_func: 'newClimbSoundsJumpS'
-  - name: ClimbSoundsJumpSS
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80133134
-    target_func: 'newClimbSoundsJumpSS'
-  - name: ClimbSoundsJump
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80133148
-    target_func: 'newClimbSoundsJump'
+#  - name: ClimbSoundsJumpS
+#    type: branch_insn
+#    branch_type: bl
+#    src_addr_pal: 0x80133120
+#    target_func: 'newClimbSoundsJumpS'
 
-  - name: ClimbSoundsLand
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80132AE8
-    target_func: 'newClimbSoundsLand'
+#  - name: ClimbSoundsJumpSS
+#    type: branch_insn
+#    branch_type: bl
+#    src_addr_pal: 0x80133134
+#    target_func: 'newClimbSoundsJumpSS'
 
-  - name: ClimbSoundsAttack
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x801334E4
-    target_func: 'newClimbSoundsAttack'
+#  - name: ClimbSoundsJump
+#    type: branch_insn
+#    branch_type: bl
+#    src_addr_pal: 0x80133148
+#    target_func: 'newClimbSoundsJump'
+
+#  - name: ClimbSoundsLand
+#    type: branch_insn
+#    branch_type: bl
+#    src_addr_pal: 0x80132AE8
+#    target_func: 'newClimbSoundsLand'
+
+#  - name: ClimbSoundsAttack
+#    type: branch_insn
+#    branch_type: bl
+#    src_addr_pal: 0x801334E4
+#    target_func: 'newClimbSoundsAttack'
 
   - name: MusicHax
     type: branch_insn

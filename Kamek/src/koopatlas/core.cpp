@@ -176,7 +176,7 @@ bool WMInit_LoadResources2(void *ptr) {
 		wm->mapPath = wm->getMapNameForIndex(wm->currentMapID);
 		if (wm->mapPath == 0)
 			wm->mapPath = wm->getMapNameForIndex(0);
-		if (!strcmp(wm->mapPath, "/Maps/WSEL.kpbin"))
+		if (!strcmp(wm->mapPath, "/Maps/Warp.kpbin"))
 			wm->warpZoneHacks = true;
 		else
 			wm->warpZoneHacks = false;

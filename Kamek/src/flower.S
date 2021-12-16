@@ -45,6 +45,13 @@ FlowerCheck:
 	beq true
 	
 	mr r3, r26
+	lis r4, Pa1Setsugen@h
+	ori r4, r4, Pa1Setsugen@l
+	bl strcmp
+	cmpwi r3, 0
+	beq true
+	
+	mr r3, r26
 	lis r4, Pa1ShiroSora@h
 	ori r4, r4, Pa1ShiroSora@l
 	bl strcmp
@@ -85,6 +92,13 @@ FlowerBuild1:
 	beq IsPa1Chika
 	
 	mr r3, r26
+	lis r4, Pa1Setsugen@h
+	ori r4, r4, Pa1Setsugen@l
+	bl strcmp
+	cmpwi r3, 0
+	beq IsPa1Setsugen
+	
+	mr r3, r26
 	lis r4, Pa1ShiroSora@h
 	ori r4, r4, Pa1ShiroSora@l
 	bl strcmp
@@ -107,8 +121,12 @@ IsPa1Chika:
 	li r28, 3
 	b returnFromFlowerBuild1
 
-IsPa1ShiroSora:
+IsPa1Setsugen:
 	li r28, 4
+	b returnFromFlowerBuild1
+
+IsPa1ShiroSora:
+	li r28, 5
 	b returnFromFlowerBuild1
 
 
@@ -123,6 +141,8 @@ FlowerBuild2:
 	cmpwi r28, 3
 	beq ItsChika
 	cmpwi r28, 4
+	beq ItsSetsugen
+	cmpwi r28, 5
 	beq ItsShiroSora
 	b returnFromFlowerBuild2
 
@@ -155,6 +175,17 @@ ItsChika:
 	bl GetRes
 	b returnFromFlowerBuild2
 
+ItsSetsugen:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaKog@h
+	ori r5, r5, ObjHanaKog@l
+	bl GetRes
+	b returnFromFlowerBuild2
+
 ItsShiroSora:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
@@ -178,6 +209,8 @@ FlowerBuild3:
 	cmpwi r28, 3
 	beq ItsChika3
 	cmpwi r28, 4
+	beq ItsSetsugen3
+	cmpwi r28, 5
 	beq ItsShiroSora3
 	b returnFromFlowerBuild2
 
@@ -209,6 +242,17 @@ ItsChika3:
 	bl GetRes
 	b returnFromFlowerBuild3
 
+ItsSetsugen3:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaKog@h
+	ori r5, r5, ObjHanaKog@l
+	bl GetRes
+	b returnFromFlowerBuild3
+
 ItsShiroSora3:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
@@ -230,6 +274,8 @@ FlowerBuild4:
 	cmpwi r28, 3
 	beq ItsChika4
 	cmpwi r28, 4
+	beq ItsSetsugen4
+	cmpwi r28, 5
 	beq ItsShiroSora4
 	b returnFromFlowerBuild2
 
@@ -268,6 +314,17 @@ ItsChika4:
 	bl GetRes
 	b returnFromFlowerBuild4
 
+ItsSetsugen4:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjKusa@h
+	ori r4, r4, ObjKusa@l
+	lis r5, ObjKusaKog@h
+	ori r5, r5, ObjKusaKog@l
+	bl GetRes
+	b returnFromFlowerBuild4
+
 ItsShiroSora4:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
@@ -285,6 +342,7 @@ ItsShiroSora4:
 # Tilesets go here
 Pa1DaishizenPlus: .string 'Pa1_daishizenplus'
 Pa1Chika: .string 'Pa1_chika'
+Pa1Setsugen: .string 'Pa1_setsugen'
 Pa1ShiroSora: .string 'Pa1_shiro_sora'
 
 # Flower brres files go here

@@ -560,7 +560,7 @@ void dWMMap_c::doEffects() {
 			{8358.0f, -5524.0f, 7000.0f}, // Tower
 			{8420.0f, -5534.0f, 7000.0f}, // Tower
 			{8380.0f, -5534.0f, 7000.0f}, // Tower
-			{7658.0f, -6385.0f, 7000.0f}, // Castle
+			{7322.0f, -5746.0f, 7000.0f}, // Castle
 		};
 		const VEC3 reallyBigScale = {1.6f, 1.6f, 1.6f};
 		const VEC3 bigScale = {1.2f, 1.2f, 1.2f};
@@ -579,7 +579,7 @@ void dWMMap_c::doEffects() {
 		effects[6].spawn("Wm_cs_snow_b", 0, &efPos, &efRot, 0);
 	}
 
-	if (mapID == 4) {
+	if (mapID == 8) {
 		// Freezeflame Volcano -- DONE
 		const VEC3 efPos = {2200.0f, -2000.0f, 7000.0f};
 		effects[0].spawn("Wm_cs_firespark", 0, &efPos, &efRot, 0);
@@ -604,7 +604,7 @@ void dWMMap_c::doEffects() {
 		effects[2].spawn("Wm_cs_firespark", 0, &efPos2, &efRot, 0);
 	}
 
-	if (mapID == 3) {
+	if (mapID == 4) {
 		// Mountain Backside -- DONE
 		VEC3 efPos = {3930.0f, -2700.0f, 7000.0f};
 		effects[0].spawn("Wm_cs_snow_a", 0, &efPos, &efRot, 0);
