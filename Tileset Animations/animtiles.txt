@@ -230,246 +230,274 @@ tileset = 3
 end tile
 
 texname = fz_300.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 768
 tileset = 3
 
 end tile
 
 texname = fz_301.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 769
 tileset = 3
 
 end tile
 
 texname = fz_302.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 770
 tileset = 3
 
 end tile
 
 texname = fz_303.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 771
 tileset = 3
 
 end tile
 
 texname = fz_304.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 772
 tileset = 3
 
 end tile
 
 texname = fz_305.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 773
 tileset = 3
 
 end tile
 
 texname = fz_306.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
 tilenum = 774
 tileset = 3
 
 end tile
 
 texname = fz_307.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
 tilenum = 775
 tileset = 3
 
 end tile
 
 texname = fz_308.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
 tilenum = 776
 tileset = 3
 
 end tile
 
 texname = fz_309.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 777
 tileset = 3
 
 end tile
 
 texname = fz_30A.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 778
 tileset = 3
 
 end tile
 
 texname = fz_30B.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 779
 tileset = 3
 
 end tile
 
-texname = fz_30C.bin
-framedelays = 6, 6, 6, 6, 6
-tilenum = 780
-tileset = 3
-
-end tile
-
 texname = fz_310.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 784
 tileset = 3
 
 end tile
 
 texname = fz_311.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 785
 tileset = 3
 
 end tile
 
 texname = fz_312.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 786
 tileset = 3
 
 end tile
 
 texname = fz_313.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 787
 tileset = 3
 
 end tile
 
 texname = fz_314.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 788
 tileset = 3
 
 end tile
 
 texname = fz_315.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 789
 tileset = 3
 
 end tile
 
 texname = fz_316.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
 tilenum = 790
 tileset = 3
 
 end tile
 
 texname = fz_317.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
 tilenum = 791
 tileset = 3
 
 end tile
 
 texname = fz_318.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
 tilenum = 792
 tileset = 3
 
 end tile
 
 texname = fz_319.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 793
 tileset = 3
 
 end tile
 
 texname = fz_31A.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 794
 tileset = 3
 
 end tile
 
 texname = fz_31B.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 795
 tileset = 3
 
 end tile
 
-texname = fz_31C.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
-tilenum = 796
-tileset = 3
-
-end tile
-
 texname = fz_320.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 800
 tileset = 3
 
 end tile
 
 texname = fz_321.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 801
 tileset = 3
 
 end tile
 
 texname = fz_322.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 802
 tileset = 3
 
 end tile
 
 texname = fz_323.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 803
 tileset = 3
 
 end tile
 
 texname = fz_324.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 804
 tileset = 3
 
 end tile
 
 texname = fz_325.bin
-framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 805
 tileset = 3
 
 end tile
 
+texname = fz_326.bin
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
+tilenum = 806
+tileset = 3
+
+end tile
+
+texname = fz_327.bin
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
+tilenum = 807
+tileset = 3
+
+end tile
+
+texname = fz_328.bin
+framedelays = 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
+tilenum = 808
+tileset = 3
+
+end tile
+
+texname = fz_329.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 809
+tileset = 3
+
+end tile
+
 texname = fz_32A.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 810
 tileset = 3
 
 end tile
 
 texname = fz_32B.bin
-framedelays = 6, 6, 6, 6, 6
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 tilenum = 811
 tileset = 3
 
 end tile
 
-texname = fz_32C.bin
-framedelays = 6, 6, 6, 6, 6
-tilenum = 812
+texname = fz_330.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 816
+tileset = 3
+
+end tile
+
+texname = fz_331.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 817
+tileset = 3
+
+end tile
+
+texname = fz_332.bin
+framedelays = 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+tilenum = 818
 tileset = 3
 
 end tile
@@ -1873,130 +1901,3 @@ tilenum = 830
 tileset = 3
 
 end tile
-
-texname = flowr_no_b.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 434
-tileset = 1
-
-end tile
-
-texname = flowr_no_bb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 450
-tileset = 1
-
-end tile
-
-texname = flowr_no_r.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 433
-tileset = 1
-
-end tile
-
-texname = flowr_no_rb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 449
-tileset = 1
-
-end tile
-
-texname = flowr_no_y.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 432
-tileset = 1
-
-end tile
-
-texname = flowr_no_yb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 448
-tileset = 1
-
-end tile
-
-texname = flowr_ko_b.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 434
-tileset = 1
-
-end tile
-
-texname = flowr_ko_bb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 450
-tileset = 1
-
-end tile
-
-texname = flowr_ko_r.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 433
-tileset = 1
-
-end tile
-
-texname = flowr_ko_rb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 449
-tileset = 1
-
-end tile
-
-texname = flowr_ko_p.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 432
-tileset = 1
-
-end tile
-
-texname = flowr_ko_pb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 448
-tileset = 1
-
-end tile
-
-texname = flowr_da_p.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 434
-tileset = 1
-
-end tile
-
-texname = flowr_da_pb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 450
-tileset = 1
-
-end tile
-
-texname = flowr_da_r.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 433
-tileset = 1
-
-end tile
-
-texname = flowr_da_rb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 449
-tileset = 1
-
-end tile
-
-texname = flowr_da_b.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 432
-tileset = 1
-
-end tile
-
-texname = flowr_da_bb.bin
-framedelays = 4, 4, 4, 5, 6, 5, 4, 4, 4, 4, 4, 5, 6, 5, 4, 4
-tilenum = 448
-tileset = 1
-
-end tile
-

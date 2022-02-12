@@ -70,5 +70,5 @@ modules:
   - processed/pumpkinGoomba.yaml
   - processed/snakeblock.yaml
   - processed/cloud.yaml
-  # - processed/pengi.yaml
+#  - processed/pengi.yaml
 #  - processed/actorlog.yaml

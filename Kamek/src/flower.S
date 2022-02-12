@@ -58,6 +58,20 @@ FlowerCheck:
 	cmpwi r3, 0
 	beq true
 	
+	mr r3, r26
+	lis r4, Pa1KaiganAoi@h
+	ori r4, r4, Pa1KaiganAoi@l
+	bl strcmp
+	cmpwi r3, 0
+	beq true
+	
+	mr r3, r26
+	lis r4, Pa1Oashishu@h
+	ori r4, r4, Pa1Oashishu@l
+	bl strcmp
+	cmpwi r3, 0
+	beq true
+	
 	# No flowers detected, sir.
 	b NoFlowers
 
@@ -105,6 +119,20 @@ FlowerBuild1:
 	cmpwi r3, 0
 	beq IsPa1ShiroSora
 	
+	mr r3, r26
+	lis r4, Pa1KaiganAoi@h
+	ori r4, r4, Pa1KaiganAoi@l
+	bl strcmp
+	cmpwi r3, 0
+	beq IsPa1KaiganAoi
+	
+	mr r3, r26
+	lis r4, Pa1Oashishu@h
+	ori r4, r4, Pa1Oashishu@l
+	bl strcmp
+	cmpwi r3, 0
+	beq IsPa1Oashishu
+	
 	# Return otherwise
 	b returnFromFlowerBuild1
 
@@ -129,6 +157,14 @@ IsPa1ShiroSora:
 	li r28, 5
 	b returnFromFlowerBuild1
 
+IsPa1KaiganAoi:
+	li r28, 6
+	b returnFromFlowerBuild1
+
+IsPa1Oashishu:
+	li r28, 7
+	b returnFromFlowerBuild1
+
 
 # First of the three arc file loaders. Loads the brres file based on r28's content.
 FlowerBuild2:
@@ -144,6 +180,10 @@ FlowerBuild2:
 	beq ItsSetsugen
 	cmpwi r28, 5
 	beq ItsShiroSora
+	cmpwi r28, 6
+	beq ItsKaiganAoi
+	cmpwi r28, 7
+	beq ItsOashishu
 	b returnFromFlowerBuild2
 
 ItsGrassland:
@@ -197,6 +237,28 @@ ItsShiroSora:
 	bl GetRes
 	b returnFromFlowerBuild2
 
+ItsKaiganAoi:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaKao@h
+	ori r5, r5, ObjHanaKao@l
+	bl GetRes
+	b returnFromFlowerBuild2
+
+ItsOashishu:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaOas@h
+	ori r5, r5, ObjHanaOas@l
+	bl GetRes
+	b returnFromFlowerBuild2
+
 
 # Another arc file swapper, no idea why there are two.
 FlowerBuild3:
@@ -212,6 +274,10 @@ FlowerBuild3:
 	beq ItsSetsugen3
 	cmpwi r28, 5
 	beq ItsShiroSora3
+	cmpwi r28, 6
+	beq ItsKaiganAoi3
+	cmpwi r28, 7
+	beq ItsOashishu3
 	b returnFromFlowerBuild2
 
 ItsGrassland3:
@@ -264,6 +330,28 @@ ItsShiroSora3:
 	bl GetRes
 	b returnFromFlowerBuild3
 
+ItsKaiganAoi3:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaKao@h
+	ori r5, r5, ObjHanaKao@l
+	bl GetRes
+	b returnFromFlowerBuild3
+
+ItsOashishu3:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaOas@h
+	ori r5, r5, ObjHanaOas@l
+	bl GetRes
+	b returnFromFlowerBuild3
+
 # This check is used for the grass. Since the game originally doesn't perform
 # a check on r28, we'll do it ourselves.
 FlowerBuild4:
@@ -277,6 +365,10 @@ FlowerBuild4:
 	beq ItsSetsugen4
 	cmpwi r28, 5
 	beq ItsShiroSora4
+	cmpwi r28, 6
+	beq ItsKaiganAoi4
+	cmpwi r28, 7
+	beq ItsOashishu4
 	b returnFromFlowerBuild2
 
 # Copypasted code, do NOT use!
@@ -336,6 +428,28 @@ ItsShiroSora4:
 	bl GetRes
 	b returnFromFlowerBuild4
 
+ItsKaiganAoi4:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjKusa@h
+	ori r4, r4, ObjKusa@l
+	lis r5, ObjKusaKao@h
+	ori r5, r5, ObjKusaKao@l
+	bl GetRes
+	b returnFromFlowerBuild4
+
+ItsOashishu4:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjKusa@h
+	ori r4, r4, ObjKusa@l
+	lis r5, ObjKusaOas@h
+	ori r5, r5, ObjKusaOas@l
+	bl GetRes
+	b returnFromFlowerBuild4
+
 .data
 .align 4
 
@@ -344,13 +458,19 @@ Pa1DaishizenPlus: .string 'Pa1_daishizenplus'
 Pa1Chika: .string 'Pa1_chika'
 Pa1Setsugen: .string 'Pa1_setsugen'
 Pa1ShiroSora: .string 'Pa1_shiro_sora'
+Pa1KaiganAoi: .string 'Pa1_kaigan_aoi'
+Pa1Oashishu: .string 'Pa1_oashishu'
 
 # Flower brres files go here
 ObjHanaDai: .string 'g3d/obj_hana_dai.brres'
 ObjHanaChi: .string 'g3d/obj_hana_chi.brres'
 ObjHanaKog: .string 'g3d/obj_hana_kog.brres'
+ObjHanaKao: .string 'g3d/obj_hana.brres'
+ObjHanaOas: .string 'g3d/obj_hana.brres'
 
 # Grass brres files go here
 ObjKusaDai: .string 'g3d/obj_kusa_dai.brres'
 ObjKusaChi: .string 'g3d/obj_kusa_chi.brres'
 ObjKusaKog: .string 'g3d/obj_kusa_kog.brres'
+ObjKusaKao: .string 'g3d/obj_kusa.brres'
+ObjKusaOas: .string 'g3d/obj_kusa.brres'
