@@ -1861,6 +1861,8 @@ SECTIONS {
 
 	returnFromAirshipCloudsNotGood = 0x809DDE34;
 	returnFromAirshipCloudsIsGood = 0x809DDE28;
+
+	callFooDeath = 0x80A6B410;
 	
 	sException__Q24nw4r2dbFv = 0x803DA860;
 

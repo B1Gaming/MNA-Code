@@ -21,6 +21,7 @@ CREATE_STATE_E(dScKoopatlas_c, EasyPairingWait);
 CREATE_STATE_E(dScKoopatlas_c, PowerupsWait);
 CREATE_STATE_E(dScKoopatlas_c, ShopWait);
 CREATE_STATE_E(dScKoopatlas_c, CoinsWait);
+CREATE_STATE_E(dScKoopatlas_c, WMViewerWait);
 CREATE_STATE_E(dScKoopatlas_c, SaveOpen);
 CREATE_STATE_E(dScKoopatlas_c, SaveSelect);
 CREATE_STATE_E(dScKoopatlas_c, SaveWindowClose);
@@ -437,6 +438,37 @@ int dScKoopatlas_c::onCreate() {
 	}
 
 	somethingAboutSound(_8042A788);
+	
+	// Set borders
+	// W1
+	WMBorder.xLeft[0] = 5184.0f;
+	WMBorder.xRight[0] = 7392.0f;
+	WMBorder.yTop[0] = -6008.0f;
+	WMBorder.yBottom[0] = -6660.0f;
+	// W2
+	WMBorder.xLeft[1] = 5376.0f;
+	WMBorder.xRight[1] = 7560.0f;
+	WMBorder.yTop[1] = -5664.0f;
+	WMBorder.yBottom[1] = -6360.0f;
+	// W3
+	WMBorder.xLeft[2] = 5568.0f;
+	WMBorder.xRight[2] = 7776.0f;
+	WMBorder.yTop[2] = -6048.0f;
+	WMBorder.yBottom[2] = -6840.0f;
+	// W4 UNFINISHED
+	WMBorder.xLeft[3] = 5184.0f;
+	WMBorder.xRight[3] = 7392.0f;
+	WMBorder.yTop[3] = -6008.0f;
+	WMBorder.yBottom[3] = -6660.0f;
+	// Warp
+	WMBorder.xLeft[4] = 1962.0f;
+	WMBorder.xRight[4] = 2118.0f;
+	WMBorder.yTop[4] =  -1460.0f;
+	WMBorder.yBottom[4] = -1460.0f;
+	
+	sfxIsPlaying = false;
+	sfxShouldPlay = false;
+	WMViewerVisible = false;
 
 	return true;
 }
@@ -563,7 +595,19 @@ void dScKoopatlas_c::executeState_Normal() {
 	 		for (int l = 0; l < 6; l++)
 	 			save->SetLevelCondition(w, l, COND_COIN_ALL);
 #endif
-	} 
+	} else if (nowPressed & WPAD_A) {
+		sfxShouldPlay = false;
+		sfxIsPlaying = false;
+		WMViewerVisible = true;
+		hud->hideAll();
+		MapSoundPlayer(SoundRelatedClass, SE_SYS_MAP_VIEW_MODE, 1);
+		dWorldCamera_c::instance->zoomLevel = 3.0f;
+		state.setState(&StateID_WMViewerWait);
+	}
+	else if (nowPressed & WPAD_B)
+	{
+		OSReport("Pos X/Y Mario: %02f, %02f\n", player->pos.x, player->pos.y);
+	}
 }
 
 void dScKoopatlas_c::executeState_CSMenu() {
@@ -786,6 +830,42 @@ void dScKoopatlas_c::executeState_CoinsWait() {
 	if (!coins->visible) {
 		state.setState(&StateID_Normal);
 		hud->unhideAll();
+	}
+
+}
+
+
+void dScKoopatlas_c::executeState_WMViewerWait() {
+
+	int nowPressed = Remocon_GetPressed(GetActiveRemocon());
+
+	if (nowPressed & WPAD_A) {
+		if (sfxIsPlaying) {
+			scrollHandle.Stop(0);
+			sfxIsPlaying = false;
+		}
+		WMViewerVisible = false;
+		dWorldCamera_c::instance->zoomLevel = 2.8f;
+		MapSoundPlayer(SoundRelatedClass, SE_SYS_MAP_VIEW_QUIT, 1);
+		state.setState(&StateID_Normal);
+		hud->unhideAll();
+	}
+
+	if (sfxShouldPlay)
+	{
+		if (!sfxIsPlaying)
+		{
+			PlaySoundWithFunctionB4(SoundRelatedClass, &scrollHandle, SE_SYS_MAP_VIEW_MOVING, 1);
+			sfxIsPlaying = true;
+		}
+	}
+	else
+	{
+		if (sfxIsPlaying)
+		{
+			scrollHandle.Stop(0);
+			sfxIsPlaying = false;
+		}
 	}
 
 }

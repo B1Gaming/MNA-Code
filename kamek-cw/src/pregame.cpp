@@ -110,21 +110,25 @@ void PregameLytHandler::hijack_loadLevelNumber() {
 	nw4r::lyt::Picture *LevelSample;
 	nw4r::lyt::Picture *Header;
 	nw4r::lyt::Picture *Background;
+	nw4r::lyt::Picture *Pattern;
 	LevelSample = layout.findPictureByName("LevelSample");
 	Header = layout.findPictureByName("Header");
 	Background = layout.findPictureByName("Background");
+	Pattern = layout.findPictureByName("Pattern");
 
 	// this is not the greatest way to read a file but I suppose it works in a pinch
 	char tplNameSample[64];
 	char tplNameHeader[64];
 	char tplNameBackground[64];
+	char tplNamePattern[64];
 	sprintf(tplNameSample, "/LevelSamples/%02d-%02d.tpl", CurrentWorld+1, CurrentLevel+1);
 	sprintf(tplNameHeader, "/PreGame/Header_%d.tpl", CurrentTheme);
 	sprintf(tplNameBackground, "/PreGame/Background_%d.tpl", CurrentTheme);
-	OSReport("Loading %s\n", tplNameHeader);
+	sprintf(tplNamePattern, "/PreGame/Pattern_%d.tpl", CurrentTheme);
 	static File tplSample;
 	static File tplHeader;
 	static File tplBackground;
+	static File tplPattern;
 	if (tplSample.open(tplNameSample)) {
 		LevelSample->material->texMaps[0].ReplaceImage((TPLPalette*)tplSample.ptr(), 0);
 	}
@@ -133,6 +137,9 @@ void PregameLytHandler::hijack_loadLevelNumber() {
 	}
 	if (tplBackground.open(tplNameBackground)) {
 		Background->material->texMaps[0].ReplaceImage((TPLPalette*)tplBackground.ptr(), 0);
+	}
+	if (tplPattern.open(tplNamePattern)) {
+		Pattern->material->texMaps[0].ReplaceImage((TPLPalette*)tplPattern.ptr(), 0);
 	}
 }
 

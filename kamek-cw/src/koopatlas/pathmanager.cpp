@@ -937,18 +937,15 @@ void dWMPathManager_c::execute() {
 	if (shouldRequestSave && !checkedForMoveAfterEndLevel) {
 		checkedForMoveAfterEndLevel = true;
 
-		static const int endLevels[11][3] = {
-			{1, 38, 1}, // W1 right
-			{2, 38, 2}, // W2 up
-			{3, 38, 0}, // W3 left
+		static const int endLevels[7][3] = {
+			// L0, R1, U2, D3
+			{1, 25, 1}, // W1 right
+			{2, 25, 1}, // W2 up
+			{3, 25, 1}, // W3 left
 			{4, 38, 1}, // W4 right
-			{5, 38, 1}, // W5 right
-			{6, 38, 2}, // W6 up
-			{7, 38, 1}, // W7 right
-			{10, 5, 2}, // GW up
-			{10, 10, 0}, // MM left
-			{10, 15, 3}, // CC down
-			{10, 25, 1}, // SC right
+			{5, 25, 1}, // W5 right
+			{6, 38, 1}, // W6 up
+			{7, 25, 1}, // W7 right
 		};
 
 		int w = (LastLevelPlayed[0] & 0x7F) + 1;

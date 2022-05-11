@@ -81,40 +81,6 @@ hooks:
     addr_pal: 0x800E53E0
     data: '4E800020'
 
-  - name: ClimbSounds
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80132EFC
-    target_func: 'newClimbSounds'
-
-  - name: ClimbSoundsJumpS
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80133120
-    target_func: 'newClimbSoundsJumpS'
-  - name: ClimbSoundsJumpSS
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80133134
-    target_func: 'newClimbSoundsJumpSS'
-  - name: ClimbSoundsJump
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80133148
-    target_func: 'newClimbSoundsJump'
-
-  - name: ClimbSoundsLand
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x80132AE8
-    target_func: 'newClimbSoundsLand'
-
-  - name: ClimbSoundsAttack
-    type: branch_insn
-    branch_type: bl
-    src_addr_pal: 0x801334E4
-    target_func: 'newClimbSoundsAttack'
-
   - name: MusicHax
     type: branch_insn
     src_addr_pal: 0x8008E5E4
@@ -372,3 +338,53 @@ hooks:
     branch_type: bl
     src_addr_pal: 0x80816370
     target_func: 'JrFloorFireHax'
+    
+  - name: HammerFoo
+    type: add_func_pointer
+    src_addr_pal: 0x80AFCB60
+    target_func: 'HammerFoo'
+    
+  - name: daEnLiftRotHalf_c
+    type: patch
+    addr_pal: 0x80a5d980
+    data: '38a0c000'
+
+  - name: daEnObjRotationBlock_c1
+    type: patch
+    addr_pal: 0x80a7b558
+    data: '3860c000'
+
+  - name: daEnObjRotationBlock_c2
+    type: patch
+    addr_pal: 0x80a7b570
+    data: '3860c000'
+
+  - name: daEnCoinAngle_c1
+    type: patch
+    addr_pal: 0x809e55f4
+    data: '3860c000'
+
+  - name: daEnCoinAngle_c2
+    type: patch
+    addr_pal: 0x809e560c
+    data: '3860c000'
+
+  - name: EN_BLOCK_HATENA_ANGLE
+    type: patch
+    addr_pal: 0x809c15c4
+    data: '3860c000'
+
+  - name: EN_BLOCK_RENGA_ANGLE
+    type: patch
+    addr_pal: 0x809c15dc
+    data: '3860c000'
+    
+  - name: NoTitleScreenMovie
+    type: nop_insn
+    area_pal: 0x80781FB8
+  
+  - name: SkipReplays
+    type: patch
+    addr_pal: 0x80781FBC
+    data: '38600000'
+    

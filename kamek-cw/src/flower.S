@@ -45,6 +45,27 @@ FlowerCheck:
 	beq true
 	
 	mr r3, r26
+	lis r4, Pa1Kaigan@h
+	ori r4, r4, Pa1Kaigan@l
+	bl strcmp
+	cmpwi r3, 0
+	beq true
+	
+	mr r3, r26
+	lis r4, Pa1KaiganTaiyo@h
+	ori r4, r4, Pa1KaiganTaiyo@l
+	bl strcmp
+	cmpwi r3, 0
+	beq true
+	
+	mr r3, r26
+	lis r4, Pa1Oashishu@h
+	ori r4, r4, Pa1Oashishu@l
+	bl strcmp
+	cmpwi r3, 0
+	beq true
+	
+	mr r3, r26
 	lis r4, Pa1Setsugen@h
 	ori r4, r4, Pa1Setsugen@l
 	bl strcmp
@@ -54,20 +75,6 @@ FlowerCheck:
 	mr r3, r26
 	lis r4, Pa1ShiroSora@h
 	ori r4, r4, Pa1ShiroSora@l
-	bl strcmp
-	cmpwi r3, 0
-	beq true
-	
-	mr r3, r26
-	lis r4, Pa1KaiganAoi@h
-	ori r4, r4, Pa1KaiganAoi@l
-	bl strcmp
-	cmpwi r3, 0
-	beq true
-	
-	mr r3, r26
-	lis r4, Pa1Oashishu@h
-	ori r4, r4, Pa1Oashishu@l
 	bl strcmp
 	cmpwi r3, 0
 	beq true
@@ -106,6 +113,27 @@ FlowerBuild1:
 	beq IsPa1Chika
 	
 	mr r3, r26
+	lis r4, Pa1Kaigan@h
+	ori r4, r4, Pa1Kaigan@l
+	bl strcmp
+	cmpwi r3, 0
+	beq IsPa1Kaigan
+	
+	mr r3, r26
+	lis r4, Pa1KaiganTaiyo@h
+	ori r4, r4, Pa1KaiganTaiyo@l
+	bl strcmp
+	cmpwi r3, 0
+	beq IsPa1KaiganTaiyo
+	
+	mr r3, r26
+	lis r4, Pa1Oashishu@h
+	ori r4, r4, Pa1Oashishu@l
+	bl strcmp
+	cmpwi r3, 0
+	beq IsPa1Oashishu
+	
+	mr r3, r26
 	lis r4, Pa1Setsugen@h
 	ori r4, r4, Pa1Setsugen@l
 	bl strcmp
@@ -118,20 +146,6 @@ FlowerBuild1:
 	bl strcmp
 	cmpwi r3, 0
 	beq IsPa1ShiroSora
-	
-	mr r3, r26
-	lis r4, Pa1KaiganAoi@h
-	ori r4, r4, Pa1KaiganAoi@l
-	bl strcmp
-	cmpwi r3, 0
-	beq IsPa1KaiganAoi
-	
-	mr r3, r26
-	lis r4, Pa1Oashishu@h
-	ori r4, r4, Pa1Oashishu@l
-	bl strcmp
-	cmpwi r3, 0
-	beq IsPa1Oashishu
 	
 	# Return otherwise
 	b returnFromFlowerBuild1
@@ -149,22 +163,25 @@ IsPa1Chika:
 	li r28, 3
 	b returnFromFlowerBuild1
 
-IsPa1Setsugen:
+IsPa1Kaigan:
 	li r28, 4
 	b returnFromFlowerBuild1
 
-IsPa1ShiroSora:
+IsPa1KaiganTaiyo:
 	li r28, 5
 	b returnFromFlowerBuild1
 
-IsPa1KaiganAoi:
+IsPa1Oashishu:
 	li r28, 6
 	b returnFromFlowerBuild1
 
-IsPa1Oashishu:
+IsPa1Setsugen:
 	li r28, 7
 	b returnFromFlowerBuild1
 
+IsPa1ShiroSora:
+	li r28, 8
+	b returnFromFlowerBuild1
 
 # First of the three arc file loaders. Loads the brres file based on r28's content.
 FlowerBuild2:
@@ -177,13 +194,15 @@ FlowerBuild2:
 	cmpwi r28, 3
 	beq ItsChika
 	cmpwi r28, 4
-	beq ItsSetsugen
+	beq ItsKaigan
 	cmpwi r28, 5
-	beq ItsShiroSora
+	beq ItsKaiganTaiyo
 	cmpwi r28, 6
-	beq ItsKaiganAoi
-	cmpwi r28, 7
 	beq ItsOashishu
+	cmpwi r28, 7
+	beq ItsSetsugen
+	cmpwi r28, 8
+	beq ItsShiroSora
 	b returnFromFlowerBuild2
 
 ItsGrassland:
@@ -215,36 +234,25 @@ ItsChika:
 	bl GetRes
 	b returnFromFlowerBuild2
 
-ItsSetsugen:
+ItsKaigan:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
 	addi r3, r3, 4
 	lis r4, ObjHana@h
 	ori r4, r4, ObjHana@l
-	lis r5, ObjHanaKog@h
-	ori r5, r5, ObjHanaKog@l
+	lis r5, ObjHanaKai@h
+	ori r5, r5, ObjHanaKai@l
 	bl GetRes
 	b returnFromFlowerBuild2
 
-ItsShiroSora:
+ItsKaiganTaiyo:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
 	addi r3, r3, 4
 	lis r4, ObjHana@h
 	ori r4, r4, ObjHana@l
-	lis r5, ObjHanaKog@h
-	ori r5, r5, ObjHanaKog@l
-	bl GetRes
-	b returnFromFlowerBuild2
-
-ItsKaiganAoi:
-	lis r3, DVDClass@ha
-	lwz r3, DVDClass@l(r3)
-	addi r3, r3, 4
-	lis r4, ObjHana@h
-	ori r4, r4, ObjHana@l
-	lis r5, ObjHanaKao@h
-	ori r5, r5, ObjHanaKao@l
+	lis r5, ObjHanaTai@h
+	ori r5, r5, ObjHanaTai@l
 	bl GetRes
 	b returnFromFlowerBuild2
 
@@ -256,6 +264,28 @@ ItsOashishu:
 	ori r4, r4, ObjHana@l
 	lis r5, ObjHanaOas@h
 	ori r5, r5, ObjHanaOas@l
+	bl GetRes
+	b returnFromFlowerBuild2
+
+ItsSetsugen:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaSet@h
+	ori r5, r5, ObjHanaSet@l
+	bl GetRes
+	b returnFromFlowerBuild2
+
+ItsShiroSora:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaKog@h
+	ori r5, r5, ObjHanaKog@l
 	bl GetRes
 	b returnFromFlowerBuild2
 
@@ -271,13 +301,15 @@ FlowerBuild3:
 	cmpwi r28, 3
 	beq ItsChika3
 	cmpwi r28, 4
-	beq ItsSetsugen3
+	beq ItsKaigan3
 	cmpwi r28, 5
-	beq ItsShiroSora3
+	beq ItsKaiganTaiyo3
 	cmpwi r28, 6
-	beq ItsKaiganAoi3
-	cmpwi r28, 7
 	beq ItsOashishu3
+	cmpwi r28, 7
+	beq ItsSetsugen3
+	cmpwi r28, 8
+	beq ItsShiroSora3
 	b returnFromFlowerBuild2
 
 ItsGrassland3:
@@ -308,36 +340,25 @@ ItsChika3:
 	bl GetRes
 	b returnFromFlowerBuild3
 
-ItsSetsugen3:
+ItsKaigan3:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
 	addi r3, r3, 4
 	lis r4, ObjHana@h
 	ori r4, r4, ObjHana@l
-	lis r5, ObjHanaKog@h
-	ori r5, r5, ObjHanaKog@l
+	lis r5, ObjHanaKai@h
+	ori r5, r5, ObjHanaKai@l
 	bl GetRes
 	b returnFromFlowerBuild3
 
-ItsShiroSora3:
+ItsKaiganTaiyo3:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
 	addi r3, r3, 4
 	lis r4, ObjHana@h
 	ori r4, r4, ObjHana@l
-	lis r5, ObjHanaKog@h
-	ori r5, r5, ObjHanaKog@l
-	bl GetRes
-	b returnFromFlowerBuild3
-
-ItsKaiganAoi3:
-	lis r3, DVDClass@ha
-	lwz r3, DVDClass@l(r3)
-	addi r3, r3, 4
-	lis r4, ObjHana@h
-	ori r4, r4, ObjHana@l
-	lis r5, ObjHanaKao@h
-	ori r5, r5, ObjHanaKao@l
+	lis r5, ObjHanaTai@h
+	ori r5, r5, ObjHanaTai@l
 	bl GetRes
 	b returnFromFlowerBuild3
 
@@ -352,6 +373,28 @@ ItsOashishu3:
 	bl GetRes
 	b returnFromFlowerBuild3
 
+ItsSetsugen3:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaSet@h
+	ori r5, r5, ObjHanaSet@l
+	bl GetRes
+	b returnFromFlowerBuild3
+
+ItsShiroSora3:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaKog@h
+	ori r5, r5, ObjHanaKog@l
+	bl GetRes
+	b returnFromFlowerBuild3
+
 # This check is used for the grass. Since the game originally doesn't perform
 # a check on r28, we'll do it ourselves.
 FlowerBuild4:
@@ -362,13 +405,15 @@ FlowerBuild4:
 	cmpwi r28, 3
 	beq ItsChika4
 	cmpwi r28, 4
-	beq ItsSetsugen4
+	beq ItsKaigan4
 	cmpwi r28, 5
-	beq ItsShiroSora4
+	beq ItsKaiganTaiyo4
 	cmpwi r28, 6
-	beq ItsKaiganAoi4
-	cmpwi r28, 7
 	beq ItsOashishu4
+	cmpwi r28, 7
+	beq ItsSetsugen4
+	cmpwi r28, 8
+	beq ItsShiroSora4
 	b returnFromFlowerBuild2
 
 # Copypasted code, do NOT use!
@@ -406,36 +451,25 @@ ItsChika4:
 	bl GetRes
 	b returnFromFlowerBuild4
 
-ItsSetsugen4:
+ItsKaigan4:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
 	addi r3, r3, 4
 	lis r4, ObjKusa@h
 	ori r4, r4, ObjKusa@l
-	lis r5, ObjKusaKog@h
-	ori r5, r5, ObjKusaKog@l
+	lis r5, ObjKusaKai@h
+	ori r5, r5, ObjKusaKai@l
 	bl GetRes
 	b returnFromFlowerBuild4
 
-ItsShiroSora4:
+ItsKaiganTaiyo4:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
 	addi r3, r3, 4
 	lis r4, ObjKusa@h
 	ori r4, r4, ObjKusa@l
-	lis r5, ObjKusaKog@h
-	ori r5, r5, ObjKusaKog@l
-	bl GetRes
-	b returnFromFlowerBuild4
-
-ItsKaiganAoi4:
-	lis r3, DVDClass@ha
-	lwz r3, DVDClass@l(r3)
-	addi r3, r3, 4
-	lis r4, ObjKusa@h
-	ori r4, r4, ObjKusa@l
-	lis r5, ObjKusaKao@h
-	ori r5, r5, ObjKusaKao@l
+	lis r5, ObjKusaTai@h
+	ori r5, r5, ObjKusaTai@l
 	bl GetRes
 	b returnFromFlowerBuild4
 
@@ -450,27 +484,54 @@ ItsOashishu4:
 	bl GetRes
 	b returnFromFlowerBuild4
 
+ItsSetsugen4:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjKusa@h
+	ori r4, r4, ObjKusa@l
+	lis r5, ObjKusaSet@h
+	ori r5, r5, ObjKusaSet@l
+	bl GetRes
+	b returnFromFlowerBuild4
+
+ItsShiroSora4:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjKusa@h
+	ori r4, r4, ObjKusa@l
+	lis r5, ObjKusaKog@h
+	ori r5, r5, ObjKusaKog@l
+	bl GetRes
+	b returnFromFlowerBuild4
+
 .data
 .align 4
 
 # Tilesets go here
 Pa1DaishizenPlus: .string 'Pa1_daishizenplus'
 Pa1Chika: .string 'Pa1_chika'
+Pa1Kaigan: .string 'Pa1_kaigan'
+Pa1KaiganTaiyo: .string 'Pa1_kaigan_taiyo'
+Pa1Oashishu: .string 'Pa1_oashishu'
 Pa1Setsugen: .string 'Pa1_setsugen'
 Pa1ShiroSora: .string 'Pa1_shiro_sora'
-Pa1KaiganAoi: .string 'Pa1_kaigan_aoi'
-Pa1Oashishu: .string 'Pa1_oashishu'
 
 # Flower brres files go here
-ObjHanaDai: .string 'g3d/obj_hana_dai.brres'
-ObjHanaChi: .string 'g3d/obj_hana_chi.brres'
-ObjHanaKog: .string 'g3d/obj_hana_kog.brres'
-ObjHanaKao: .string 'g3d/obj_hana.brres'
+ObjHanaDai: .string 'g3d/obj_hana_daishizen.brres'
+ObjHanaChi: .string 'g3d/obj_hana.brres'
+ObjHanaKai: .string 'g3d/obj_hana.brres'
+ObjHanaTai: .string 'g3d/obj_hana.brres'
 ObjHanaOas: .string 'g3d/obj_hana.brres'
+ObjHanaSet: .string 'g3d/obj_hana_kogen.brres'
+ObjHanaKog: .string 'g3d/obj_hana_kogen.brres'
 
 # Grass brres files go here
-ObjKusaDai: .string 'g3d/obj_kusa_dai.brres'
-ObjKusaChi: .string 'g3d/obj_kusa_chi.brres'
-ObjKusaKog: .string 'g3d/obj_kusa_kog.brres'
-ObjKusaKao: .string 'g3d/obj_kusa.brres'
+ObjKusaDai: .string 'g3d/obj_kusa_daishizen.brres'
+ObjKusaChi: .string 'g3d/obj_kusa_chika.brres'
+ObjKusaKai: .string 'g3d/obj_kusa.brres'
+ObjKusaTai: .string 'g3d/obj_kusa.brres'
 ObjKusaOas: .string 'g3d/obj_kusa.brres'
+ObjKusaSet: .string 'g3d/obj_kusa_kogen.brres'
+ObjKusaKog: .string 'g3d/obj_kusa_kogen.brres'

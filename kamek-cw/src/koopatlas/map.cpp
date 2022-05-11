@@ -159,13 +159,9 @@ void dWMMap_c::renderer_c::drawLayers() {
 
 	baseZ = -100.0f - (2 * data->layerCount);
 
-	bool skipFirstLayer = (wm->currentMapID == 0) && !(wm->isFirstPlay);
-
 	beginRendering();
 
 	for (int iLayer = data->layerCount - 1; iLayer >= 0; iLayer--) {
-		if (skipFirstLayer && iLayer == 0)
-			continue;
 
 		dKPLayer_s *layer = data->layers[iLayer];
 		renderMtx[2][3] += 2.0f;
@@ -605,12 +601,12 @@ void dWMMap_c::doEffects() {
 		}
 
 		// Mountain Snow
-		const VEC3 efPos = {6000.0f, -5250.0f, 7000.0f};
+		const VEC3 efPos = {6000.0f, -3250.0f, 7000.0f};
 		effects[6].spawn("Wm_cs_snow_b", 0, &efPos, &efRot, 0);
 	}
 #endif
 
-	if (mapID == 4) {
+	if (mapID == 5) {
 		// Freezeflame Volcano -- DONE
 		const VEC3 efPos = {2200.0f, -2000.0f, 7000.0f};
 		effects[0].spawn("Wm_cs_firespark", 0, &efPos, &efRot, 0);
@@ -635,7 +631,7 @@ void dWMMap_c::doEffects() {
 		effects[2].spawn("Wm_cs_firespark", 0, &efPos2, &efRot, 0);
 	}
 
-	if (mapID == 3) {
+	if (mapID == 9) {
 		// Mountain Backside -- DONE
 		VEC3 efPos = {3930.0f, -2700.0f, 7000.0f};
 		effects[0].spawn("Wm_cs_snow_a", 0, &efPos, &efRot, 0);
