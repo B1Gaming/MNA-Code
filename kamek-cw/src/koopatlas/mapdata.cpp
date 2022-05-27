@@ -72,7 +72,7 @@ void dKPNode_s::setupNodeExtra() {
 			if (exitComplete && secretComplete)
 				colour = "g3d/blue.brres";
 			else if (exitComplete || secretComplete)
-				colour = "g3d/blue.brres";
+				colour = "g3d/purple.brres";
 			else
 				colour = "g3d/red.brres";
 		} else {
@@ -87,17 +87,9 @@ void dKPNode_s::setupNodeExtra() {
 	this->extra->mallocator.link(-1, GameHeaps[0], 0, 0x20);
 
 	nw4r::g3d::ResFile rg(getResource("cobCourse", colour));
-	nw4r::g3d::ResMdl nodemdl = rg.GetResMdl("cobCourse");
-	this->extra->model.setup(nodemdl, &this->extra->mallocator, 0x224, 1, 0);
+	this->extra->model.setup(rg.GetResMdl("cobCourse"), &this->extra->mallocator, 0x224, 1, 0);
 	this->extra->matrix.identity();
 	SetupTextures_MapObj(&this->extra->model, 0);
-
-	// setup the color animation
-	nw4r::g3d::ResAnmClr anmRes = rg.GetResAnmClr("cobCourseOpen");
-	this->extra->clrAnm.setup(nodemdl, anmRes, &this->extra->mallocator, 0, 1);
-	this->extra->clrAnm.bind(&this->extra->model, anmRes, 0, 0);
-	this->extra->model.bindAnim(&this->extra->clrAnm, 0.0f);
-
 
 	this->extra->mallocator.unlink();
 }

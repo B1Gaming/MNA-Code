@@ -159,13 +159,9 @@ void dWMMap_c::renderer_c::drawLayers() {
 
 	baseZ = -100.0f - (2 * data->layerCount);
 
-	bool skipFirstLayer = (wm->currentMapID == 0) && !(wm->isFirstPlay);
-
 	beginRendering();
 
 	for (int iLayer = data->layerCount - 1; iLayer >= 0; iLayer--) {
-		if (skipFirstLayer && iLayer == 0)
-			continue;
 
 		dKPLayer_s *layer = data->layers[iLayer];
 		renderMtx[2][3] += 2.0f;
@@ -519,6 +515,7 @@ void dWMMap_c::renderPathLayer(dKPLayer_s *layer) {
 			node->extra->model.setDrawMatrix(node->extra->matrix);
 			node->extra->model.setScale(0.8f, 0.8f, 0.8f);
 			node->extra->model.calcWorld(false);
+
 			node->extra->model.scheduleForDrawing();
 		}
 	}

@@ -1,3 +1,3 @@
 @ECHO OFF
-python makeGame.py SummerSun.yaml
+py -3 makeGame.py SummerSun.yaml
 pause
