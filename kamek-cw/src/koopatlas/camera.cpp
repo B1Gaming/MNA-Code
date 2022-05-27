@@ -72,11 +72,13 @@ int dWorldCamera_c::onExecute() {
 	{
 		// 2460.000000, -2376.000000
 		int heldButtons = Remocon_GetButtons(GetActiveRemocon());
+		bool wasSoundPlayed = false;
 		if (heldButtons & WPAD_LEFT) //left
 		{
 			if (currentX > dScKoopatlas_c::instance->WMBorder.xLeft[dScKoopatlas_c::instance->currentMapID]) {	
 				currentX -= 7.0f;
 				dScKoopatlas_c::instance->sfxShouldPlay = true;
+				wasSoundPlayed = true;
 			}
 			else
 				dScKoopatlas_c::instance->sfxShouldPlay = false;
@@ -86,15 +88,17 @@ int dWorldCamera_c::onExecute() {
 			if (currentX < dScKoopatlas_c::instance->WMBorder.xRight[dScKoopatlas_c::instance->currentMapID]) {
 				currentX += 7.0f;
 				dScKoopatlas_c::instance->sfxShouldPlay = true;
+				wasSoundPlayed = true;
 			}
 			else
 				dScKoopatlas_c::instance->sfxShouldPlay = false;
 		}
-		else if (heldButtons & WPAD_DOWN) //down
+		if (heldButtons & WPAD_DOWN) //down
 		{
 			if (currentY > dScKoopatlas_c::instance->WMBorder.yBottom[dScKoopatlas_c::instance->currentMapID]) {
 				currentY -= 7.0f;
 				dScKoopatlas_c::instance->sfxShouldPlay = true;
+				wasSoundPlayed = true;
 			}
 			else
 				dScKoopatlas_c::instance->sfxShouldPlay = false;
@@ -104,16 +108,19 @@ int dWorldCamera_c::onExecute() {
 			if (currentY < dScKoopatlas_c::instance->WMBorder.yTop[dScKoopatlas_c::instance->currentMapID]) {
 				currentY += 7.0f;
 				dScKoopatlas_c::instance->sfxShouldPlay = true;
+				wasSoundPlayed = true;
 			}
 			else
 				dScKoopatlas_c::instance->sfxShouldPlay = false;
 		}
-		else
+		if (!wasSoundPlayed)
 		{
 			dScKoopatlas_c::instance->sfxShouldPlay = false;
 		}
 	}
-	else {
+	else
+	{
+
 		if (dScKoopatlas_c::instance->warpZoneHacks) {
 			currentX = 2040.0f;
 			currentY = -1460.0f;
@@ -213,7 +220,7 @@ void dWorldCamera_c::panToBounds(float left, float top, float right, float botto
 }
 
 
-void dWorldCamera_c::panToPosition(float x, float y, float zoom) {
+void dWorldCamera_c::panToPosition(float x, float y, float zoom, bool MapViewReturn) {
 	panFromX = currentX;
 	panFromY = currentY;
 	panFromZoom = zoomLevel;
@@ -226,7 +233,12 @@ void dWorldCamera_c::panToPosition(float x, float y, float zoom) {
 	float yDiff = abs(panToY - panFromY);
 
 	float panLength = sqrtf((xDiff*xDiff) + (yDiff*yDiff));
-	float panSteps = panLength / 2.3f;
+
+	float panSteps;
+	if (MapViewReturn)
+		panSteps = panLength / 100.0f;
+	else
+		panSteps = panLength / 2.3f;
 	float scaleSteps = abs(panToZoom - panFromZoom) / 0.1f;
 	float stepCount = max(panSteps, scaleSteps);
 
@@ -238,7 +250,8 @@ void dWorldCamera_c::panToPosition(float x, float y, float zoom) {
 	panTotalSteps = stepCount;
 
 	panning = true;
-	followPlayer = false;
+	if (!MapViewReturn)
+		followPlayer = false;
 }
 
 

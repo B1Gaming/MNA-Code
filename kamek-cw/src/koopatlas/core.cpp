@@ -177,7 +177,7 @@ bool WMInit_LoadResources2(void *ptr) {
 		wm->mapPath = wm->getMapNameForIndex(wm->currentMapID);
 		if (wm->mapPath == 0)
 			wm->mapPath = wm->getMapNameForIndex(0);
-		if (!strcmp(wm->mapPath, "/Maps/Warp.kpbin"))
+		if (!strcmp(wm->mapPath, "/Maps/WSEL.kpbin"))
 			wm->warpZoneHacks = true;
 		else
 			wm->warpZoneHacks = false;
@@ -443,7 +443,7 @@ int dScKoopatlas_c::onCreate() {
 	// W1
 	WMBorder.xLeft[0] = 5184.0f;
 	WMBorder.xRight[0] = 7392.0f;
-	WMBorder.yTop[0] = -6008.0f;
+	WMBorder.yTop[0] = -5976.0f;
 	WMBorder.yBottom[0] = -6660.0f;
 	// W2
 	WMBorder.xLeft[1] = 5376.0f;
@@ -465,6 +465,8 @@ int dScKoopatlas_c::onCreate() {
 	WMBorder.xRight[4] = 2118.0f;
 	WMBorder.yTop[4] =  -1460.0f;
 	WMBorder.yBottom[4] = -1460.0f;
+	
+	//...
 	
 	sfxIsPlaying = false;
 	sfxShouldPlay = false;
@@ -574,6 +576,11 @@ void dScKoopatlas_c::executeState_Normal() {
 	if (pathManager.doingThings())
 		return;
 
+	if (scrollHandle.Exists()) {
+		scrollHandle.Stop(0);
+		sfxIsPlaying = false;
+	}
+	
 	int nowPressed = Remocon_GetPressed(GetActiveRemocon());
 
 	// Nothing related to the menu is going on
@@ -596,12 +603,9 @@ void dScKoopatlas_c::executeState_Normal() {
 	 			save->SetLevelCondition(w, l, COND_COIN_ALL);
 #endif
 	} else if (nowPressed & WPAD_A) {
-		sfxShouldPlay = false;
-		sfxIsPlaying = false;
 		WMViewerVisible = true;
 		hud->hideAll();
 		MapSoundPlayer(SoundRelatedClass, SE_SYS_MAP_VIEW_MODE, 1);
-		dWorldCamera_c::instance->zoomLevel = 3.0f;
 		state.setState(&StateID_WMViewerWait);
 	}
 	else if (nowPressed & WPAD_B)
@@ -840,12 +844,14 @@ void dScKoopatlas_c::executeState_WMViewerWait() {
 	int nowPressed = Remocon_GetPressed(GetActiveRemocon());
 
 	if (nowPressed & WPAD_A) {
-		if (sfxIsPlaying) {
+		if (sfxIsPlaying || scrollHandle.Exists()) {
 			scrollHandle.Stop(0);
 			sfxIsPlaying = false;
 		}
+
+		dWorldCamera_c::instance->panToPosition(player->pos.x, player->pos.y, 2.8f, true);
+
 		WMViewerVisible = false;
-		dWorldCamera_c::instance->zoomLevel = 2.8f;
 		MapSoundPlayer(SoundRelatedClass, SE_SYS_MAP_VIEW_QUIT, 1);
 		state.setState(&StateID_Normal);
 		hud->unhideAll();
