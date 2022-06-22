@@ -301,8 +301,8 @@ void ClearOldPathAvailabilityData() {
 }
 
 dWMPathManager_c::~dWMPathManager_c() {
-	bool entering8_25 = (MaybeFinishingLevel[0] == 7) && (MaybeFinishingLevel[1] == 24);
-	if (!isEnteringLevel && !entering8_25) {
+	// bool entering8_25 = (MaybeFinishingLevel[0] == 7) && (MaybeFinishingLevel[1] == 24);
+	if (!isEnteringLevel/* && !entering8_25*/) {
 		ClearOldPathAvailabilityData();
 	}
 
@@ -951,7 +951,7 @@ void dWMPathManager_c::execute() {
 		int w = (LastLevelPlayed[0] & 0x7F) + 1;
 		int l = LastLevelPlayed[1] + 1;
 
-		for (int i = 0; i < 11; i++) {
+		for (int i = 0; i < 7; i++) {
 			if (endLevels[i][0] == w && endLevels[i][1] == l) {
 				afterFortressMode = true;
 				startMovementTo(currentNode->exits[endLevels[i][2]]);
@@ -1460,6 +1460,10 @@ void dWMPathManager_c::moveThroughPath(int pressedDir) {
 			save->current_path_node = pathLayer->findNodeID(to);
 			if (!calledEnteredNode && dWMHud_c::instance)
 				dWMHud_c::instance->enteredNode();
+			
+			OSReport("Reached pos %f %f\n", player->pos.x, player->pos.y);
+			OSReport("Reached World %d, Node %d,", dScKoopatlas_c::instance->currentMapID, save->current_path_node);
+			OSReport("Worldmap %d, NWID %d\n", save->current_world, save->newerWorldID);
 
 			// Should we continue here? (Requested by Jason)
 			int held = Remocon_GetButtons(GetActiveRemocon());
@@ -1506,10 +1510,20 @@ void dWMPathManager_c::copyWorldDefToSave(const dKPWorldDef_s *world) {
 	save->hudHintS = world->hudHintS;
 	save->hudHintL = world->hudHintL;
 
-	if (save->titleScreenWorld == 3 && save->titleScreenLevel == 10)
-		return;
-	save->titleScreenWorld = world->titleScreenWorld;
-	save->titleScreenLevel = world->titleScreenLevel;
+	if (!(save->titleScreenWorld == 3 && save->titleScreenLevel == 10)) {
+		save->titleScreenWorld = world->titleScreenWorld;
+		save->titleScreenLevel = world->titleScreenLevel;
+	}
+
+
+	OSReport("World Definition | Music: %d; NWID: %d; ", save->currentMapMusic, save->newerWorldID);
+	OSReport("WName: %s; ", save->newerWorldName);
+	OSReport("FSTextColours: %08X %08X; ", *(u32*)&save->fsTextColours[0], *(u32*)&save->fsTextColours[1]);
+	OSReport("FSHintColours: %08X %08X; ", *(u32*)&save->fsHintColours[0], *(u32*)&save->fsHintColours[1]);
+	OSReport("HUDTextColours: %08X %08X; ", *(u32*)&save->hudTextColours[0], *(u32*)&save->hudTextColours[1]);
+	OSReport("HUD HSL: %d %d %d; ", world->hudHintH, world->hudHintS, world->hudHintL);
+	OSReport("Titlescreen: %d-%d\n", world->titleScreenWorld, world->titleScreenLevel);
+
 }
 
 void dWMPathManager_c::activatePoint() {
@@ -1521,6 +1535,8 @@ void dWMPathManager_c::activatePoint() {
 		int l = currentNode->levelNumber[1] - 1;
 
 		if (l == 98) {
+			dKPMusic::lowerMusic();
+
 			dWMShop_c::instance->show(w);
 			dWMHud_c::instance->hideAll();
 			dScKoopatlas_c::instance->state.setState(&dScKoopatlas_c::instance->StateID_ShopWait);

@@ -81,6 +81,6 @@ hooks:
 
   - name: CreateBackwardsData
     type: branch_insn
-    branch_type: b
+    branch_type: bl
     src_addr_pal: 0x80AA8150 
     target_func: 'CreateBackwardsData'

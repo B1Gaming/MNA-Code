@@ -1,0 +1,6 @@
+0 Forest
+1 Underground
+2 Tower
+3 Beach
+4 Underwater
+5 Castle

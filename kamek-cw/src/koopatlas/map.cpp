@@ -158,10 +158,14 @@ void dWMMap_c::renderer_c::drawLayers() {
 	dKPMapFile_s *data = dataCls->data;
 
 	baseZ = -100.0f - (2 * data->layerCount);
+	
+	bool skipFirstLayer = (wm->currentMapID == 0) && !(wm->isFirstPlay);
 
 	beginRendering();
 
 	for (int iLayer = data->layerCount - 1; iLayer >= 0; iLayer--) {
+		if (skipFirstLayer && iLayer == 0)
+			continue;
 
 		dKPLayer_s *layer = data->layers[iLayer];
 		renderMtx[2][3] += 2.0f;

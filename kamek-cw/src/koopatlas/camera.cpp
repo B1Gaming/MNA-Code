@@ -75,7 +75,7 @@ int dWorldCamera_c::onExecute() {
 		bool wasSoundPlayed = false;
 		if (heldButtons & WPAD_LEFT) //left
 		{
-			if (currentX > dScKoopatlas_c::instance->WMBorder.xLeft[dScKoopatlas_c::instance->currentMapID]) {	
+			if (currentX > dScKoopatlas_c::instance->coordinates[0]) {	
 				currentX -= 7.0f;
 				dScKoopatlas_c::instance->sfxShouldPlay = true;
 				wasSoundPlayed = true;
@@ -85,7 +85,7 @@ int dWorldCamera_c::onExecute() {
 		}
 		else if (heldButtons & WPAD_RIGHT) //right
 		{
-			if (currentX < dScKoopatlas_c::instance->WMBorder.xRight[dScKoopatlas_c::instance->currentMapID]) {
+			if (currentX < dScKoopatlas_c::instance->coordinates[1]) {
 				currentX += 7.0f;
 				dScKoopatlas_c::instance->sfxShouldPlay = true;
 				wasSoundPlayed = true;
@@ -95,7 +95,7 @@ int dWorldCamera_c::onExecute() {
 		}
 		if (heldButtons & WPAD_DOWN) //down
 		{
-			if (currentY > dScKoopatlas_c::instance->WMBorder.yBottom[dScKoopatlas_c::instance->currentMapID]) {
+			if (currentY > dScKoopatlas_c::instance->coordinates[3]) {
 				currentY -= 7.0f;
 				dScKoopatlas_c::instance->sfxShouldPlay = true;
 				wasSoundPlayed = true;
@@ -105,7 +105,7 @@ int dWorldCamera_c::onExecute() {
 		}
 		else if (heldButtons & WPAD_UP) //up
 		{
-			if (currentY < dScKoopatlas_c::instance->WMBorder.yTop[dScKoopatlas_c::instance->currentMapID]) {
+			if (currentY < dScKoopatlas_c::instance->coordinates[2]) {
 				currentY += 7.0f;
 				dScKoopatlas_c::instance->sfxShouldPlay = true;
 				wasSoundPlayed = true;

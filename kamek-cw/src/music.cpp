@@ -32,7 +32,7 @@ const char* SongNameList [] = {
 	"UNDERGROUND",
 	"BONUS",
 	"JUNGLE",
-	"MAIN",
+	"BEACH_GX",
 	"UNDERWATER",
 	"ATHLETIC",
 	"DESERT",

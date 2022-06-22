@@ -22,6 +22,7 @@ CREATE_STATE_E(dScKoopatlas_c, PowerupsWait);
 CREATE_STATE_E(dScKoopatlas_c, ShopWait);
 CREATE_STATE_E(dScKoopatlas_c, CoinsWait);
 CREATE_STATE_E(dScKoopatlas_c, WMViewerWait);
+CREATE_STATE_E(dScKoopatlas_c, WSELWait);
 CREATE_STATE_E(dScKoopatlas_c, SaveOpen);
 CREATE_STATE_E(dScKoopatlas_c, SaveSelect);
 CREATE_STATE_E(dScKoopatlas_c, SaveWindowClose);
@@ -184,6 +185,8 @@ bool WMInit_LoadResources2(void *ptr) {
 		OSReport("Load map: %s\n", wm->mapPath);
 	}
 
+	
+
 	if (wm->mapData.load(wm->mapPath)) {
 		return true;
 	} else
@@ -192,8 +195,56 @@ bool WMInit_LoadResources2(void *ptr) {
 
 bool WMInit_SetupWait(void *ptr) {
 	SpammyReport("WMInit_SetupWait called\n");
-
+	
 	dScKoopatlas_c *wm = (dScKoopatlas_c*)ptr;
+
+	if (!wm->borderLoaded)
+	{
+		// Load borders from files
+		OSReport("Load borders for World %d...\n", wm->currentMapID+1);
+
+		const char* wholeText;
+		char* borderPath;
+		sprintf(borderPath, "/Maps/Borders/W%d.txt", wm->currentMapID+1);
+
+		wholeText = (const char*)LoadFile(&wm->borderFileHandle, borderPath);
+
+		if (wholeText)  // Loaded successfully
+		{
+			//OSReport(wholeText);
+			//OSReport("\n");
+
+			#define isdigit(c) (c >= '0' && c <= '9')
+			for (int i = 0; i < 4; i++){
+                int acc = 0;
+                for(; isdigit(*wholeText); ++wholeText) {
+                    acc *= 10;
+                    acc += *wholeText - '0';
+                }
+    		 	while(!isdigit(*wholeText)){
+                	++wholeText;
+     			}
+                if (i > 1) {
+                    wm->coordinates[i] = -acc;
+                } else {
+                    wm->coordinates[i] = acc;
+                }
+            }
+			
+		}
+		else
+		{
+			OSReport("The following border file could not be loaded: W%d.txt\n", wm->currentMapID+1);
+			wm->coordinates[0] = 0.0;
+			wm->coordinates[1] = 0.0;
+			wm->coordinates[2] = 0.0;
+			wm->coordinates[3] = 0.0;
+		}
+
+		wm->borderLoaded = true;
+		FreeFile(&wm->borderFileHandle);
+		OSReport("Borders loaded successfully!\n");
+	}
 
 	bool success = true;
 
@@ -266,6 +317,10 @@ bool WMInit_SetupExtra(void *ptr) {
 
 	SpammyReport("creating Star Coin Menu\n");
 	wm->coins = (dWMStarCoin_c*)CreateParentedObject(WM_STARCOIN, wm, 0, 0);
+	
+	SpammyReport("creating World Select Menu\n");
+	wm->wsel = (dWMWSEL_c*)CreateParentedObject(WM_WSEL, wm, 0, 2);
+
 
 
 	SpammyReport("SetupExtra done\n");
@@ -331,6 +386,11 @@ void dScKoopatlas_c::startMusic() {
 
 
 int dScKoopatlas_c::onCreate() {
+	sfxIsPlaying = false;
+	sfxShouldPlay = false;
+	WMViewerVisible = false;
+	borderLoaded = false;
+
 	OSReport("KP scene settings: %08x\n", settings);
 
 	SpammyReport("onCreate() called\n");
@@ -424,11 +484,11 @@ int dScKoopatlas_c::onCreate() {
 		save->current_world = 6;
 	}
 
-	if (MaybeFinishingLevel[0] == 7 && MaybeFinishingLevel[1] == 24 && save->CheckLevelCondition(7, 24, COND_NORMAL)) {
-		currentMapID = 7; // KoopaPlanetUnd
-		save->current_world = 7;
-		isAfter8Castle = true;
-	}
+	//if (MaybeFinishingLevel[0] == 7 && MaybeFinishingLevel[1] == 24 && save->CheckLevelCondition(7, 24, COND_NORMAL)) {
+	//	currentMapID = 7; // KoopaPlanetUnd
+	//	save->current_world = 7;
+	//	isAfter8Castle = true;
+	//}
 
 	isEndingScene = (settings & 0x20000000);
 	if (isEndingScene) {
@@ -437,40 +497,9 @@ int dScKoopatlas_c::onCreate() {
 		save->current_path_node = 0;
 	}
 
+	isGamePaused = false;
+
 	somethingAboutSound(_8042A788);
-	
-	// Set borders
-	// W1
-	WMBorder.xLeft[0] = 5184.0f;
-	WMBorder.xRight[0] = 7392.0f;
-	WMBorder.yTop[0] = -5976.0f;
-	WMBorder.yBottom[0] = -6660.0f;
-	// W2
-	WMBorder.xLeft[1] = 5376.0f;
-	WMBorder.xRight[1] = 7560.0f;
-	WMBorder.yTop[1] = -5664.0f;
-	WMBorder.yBottom[1] = -6360.0f;
-	// W3
-	WMBorder.xLeft[2] = 5568.0f;
-	WMBorder.xRight[2] = 7776.0f;
-	WMBorder.yTop[2] = -6048.0f;
-	WMBorder.yBottom[2] = -6840.0f;
-	// W4 UNFINISHED
-	WMBorder.xLeft[3] = 5184.0f;
-	WMBorder.xRight[3] = 7392.0f;
-	WMBorder.yTop[3] = -6008.0f;
-	WMBorder.yBottom[3] = -6660.0f;
-	// Warp
-	WMBorder.xLeft[4] = 1962.0f;
-	WMBorder.xRight[4] = 2118.0f;
-	WMBorder.yTop[4] =  -1460.0f;
-	WMBorder.yBottom[4] = -1460.0f;
-	
-	//...
-	
-	sfxIsPlaying = false;
-	sfxShouldPlay = false;
-	WMViewerVisible = false;
 
 	return true;
 }
@@ -565,6 +594,7 @@ void dScKoopatlas_c::endState_ContinueWait() {
 	GameMgrP->_AFC = 0;
 }
 
+bool isHUDVisible = true;
 
 void dScKoopatlas_c::executeState_Normal() {
 	if (pathManager.completionMessagePending) {
@@ -575,7 +605,7 @@ void dScKoopatlas_c::executeState_Normal() {
 
 	if (pathManager.doingThings())
 		return;
-
+	
 	if (scrollHandle.Exists()) {
 		scrollHandle.Stop(0);
 		sfxIsPlaying = false;
@@ -585,22 +615,34 @@ void dScKoopatlas_c::executeState_Normal() {
 
 	// Nothing related to the menu is going on
 	if (nowPressed & WPAD_ONE) {
+		MapSoundPlayer(SoundRelatedClass, 0x79, 1);
+		dKPMusic::lowerMusic();
+
 		stockItem->show = true;
 		state.setState(&StateID_PowerupsWait);
 		hud->hideAll();
 	} else if (nowPressed & WPAD_PLUS) {
+		MapSoundPlayer(SoundRelatedClass, 0x7C, 1);
+		dKPMusic::lowerMusic();
+
 		CSMENU_ACTIVE(this->csMenu) = true;
 		state.setState(&StateID_CSMenu);
 		hud->hideAll();
+	} else if (nowPressed & WPAD_MINUS) {
+		dKPMusic::lowerMusic();
+
+		wsel->show();
+		state.setState(&StateID_WSELWait);
+		hud->hideAll();
 #ifdef NEWER_DEBUG
-	 } else if (nowPressed & WPAD_MINUS) {
-	 	pathManager.unlockAllPaths(2);
-	 } else if (nowPressed & WPAD_A) {
-	 	pathManager.unlockAllPaths(0);
-	 	SaveBlock *save = GetSaveFile()->GetBlock(-1);
-	 	for (int w = 0; w < 6; w++)
-	 		for (int l = 0; l < 6; l++)
-	 			save->SetLevelCondition(w, l, COND_COIN_ALL);
+	} else if (nowPressed & WPAD_MINUS) {
+		pathManager.unlockAllPaths(2);
+	} else if (nowPressed & WPAD_A) {
+		pathManager.unlockAllPaths(0);
+		SaveBlock *save = GetSaveFile()->GetBlock(-1);
+		for (int w = 0; w < 6; w++)
+			for (int l = 0; l < 6; l++)
+				save->SetLevelCondition(w, l, COND_COIN_ALL);
 #endif
 	} else if (nowPressed & WPAD_A) {
 		WMViewerVisible = true;
@@ -610,7 +652,7 @@ void dScKoopatlas_c::executeState_Normal() {
 	}
 	else if (nowPressed & WPAD_B)
 	{
-		OSReport("Pos X/Y Mario: %02f, %02f\n", player->pos.x, player->pos.y);
+		OSReport("Pos X/Y Mario: %02d, %02d\n", player->pos.x, player->pos.y);
 	}
 }
 
@@ -672,6 +714,7 @@ void dScKoopatlas_c::executeState_CSMenu() {
 		} else {
 			// Ok, change back to STATE_Normal
 			hud->unhideAll();
+			dKPMusic::higherMusic();
 			state.setState(&StateID_Normal);
 		}
 	}
@@ -726,6 +769,7 @@ void dScKoopatlas_c::executeState_TitleConfirmHitWait() {
 
 	if (!yesNoWindow->animationActive) {
 		if (yesNoWindow->current == 1) {
+			dKPMusic::higherMusic();
 			state.setState(&StateID_Normal);
 			hud->unhideAll();
 		} else {
@@ -769,7 +813,8 @@ void dScKoopatlas_c::executeState_PlayerChangeWait() {
 				Player_Active[i] = isThere ? 1 : 0;
 				if (!isThere) Player_Flags[i] = 0;
 			}
-
+			
+			dKPMusic::higherMusic();
 			state.setState(&StateID_Normal);
 			hud->unhideAll();
 		}
@@ -808,6 +853,7 @@ void dScKoopatlas_c::executeState_PowerupsWait() {
 		player->modelHandler->mdlClass->setPowerup(Player_Powerup[0]);
 		player->bindPats();
 
+		dKPMusic::higherMusic();
 		state.setState(&StateID_Normal);
 		hud->unhideAll();
 	}
@@ -820,6 +866,7 @@ void dScKoopatlas_c::executeState_PowerupsWait() {
 void dScKoopatlas_c::executeState_ShopWait() {
 
 	if (!shop->visible) {
+		dKPMusic::higherMusic();
 		state.setState(&StateID_Normal);
 		hud->unhideAll();
 	}
@@ -832,6 +879,7 @@ void dScKoopatlas_c::executeState_ShopWait() {
 void dScKoopatlas_c::executeState_CoinsWait() {
 
 	if (!coins->visible) {
+		dKPMusic::higherMusic();
 		state.setState(&StateID_Normal);
 		hud->unhideAll();
 	}
@@ -852,6 +900,7 @@ void dScKoopatlas_c::executeState_WMViewerWait() {
 		dWorldCamera_c::instance->panToPosition(player->pos.x, player->pos.y, 2.8f, true);
 
 		WMViewerVisible = false;
+
 		MapSoundPlayer(SoundRelatedClass, SE_SYS_MAP_VIEW_QUIT, 1);
 		state.setState(&StateID_Normal);
 		hud->unhideAll();
@@ -875,6 +924,18 @@ void dScKoopatlas_c::executeState_WMViewerWait() {
 	}
 
 }
+
+
+/**********************************************************************/
+// STATE_WSELWait : Wait for the user to exit the WSEL screen.
+void dScKoopatlas_c::executeState_WSELWait() {
+	if (!wsel->isVisible) {
+		dKPMusic::higherMusic();
+		state.setState(&StateID_Normal);
+		hud->unhideAll();
+	}
+}
+
 
 /**********************************************************************/
 // STATE_SaveOpen : Waiting for the "Save?" YesNoWindow to open
@@ -926,6 +987,7 @@ void dScKoopatlas_c::executeState_SaveWindowClose() {
 
 	if (!yesNoWindow->visible) {
 		if (yesNoWindow->current == 1) {
+			dKPMusic::higherMusic();
 			state.setState(&StateID_Normal);
 			hud->unhideAll();
 		} else {
@@ -970,6 +1032,7 @@ void dScKoopatlas_c::executeState_SaveEndWindow() {
 void dScKoopatlas_c::executeState_SaveEndCloseWait() {
 
 	if (!yesNoWindow->animationActive) {
+		dKPMusic::higherMusic();
 		state.setState(&StateID_Normal);
 		hud->unhideAll();
 	}
@@ -1027,6 +1090,7 @@ void dScKoopatlas_c::executeState_QuickSaveWindowClose() {
 
 	if (!yesNoWindow->visible) {
 		if (yesNoWindow->current == 1) {
+			dKPMusic::higherMusic();
 			state.setState(&StateID_Normal);
 			hud->unhideAll();
 		} else {
@@ -1071,6 +1135,7 @@ void dScKoopatlas_c::executeState_QuickSaveEndCloseWait() {
 
 	if (!yesNoWindow->animationActive) {
 		if (yesNoWindow->current == 1) {
+			dKPMusic::higherMusic();
 			state.setState(&StateID_Normal);
 			hud->unhideAll();
 		} else {

@@ -1175,6 +1175,7 @@ SECTIONS {
 	strcmp = 0x802E1DA4;
 	sprintf = 0x802E1ACC;
 	strrchr = 0x802E1F30;
+	mbstowcs = 0x802DF0EC;
 
 	wcslen = 0x802E470C;
 	wcscpy = 0x802E4728;
@@ -1354,12 +1355,14 @@ SECTIONS {
 	_Z7sprintfPcPKcz = 0x802E1ACC;
 	_Z8snprintfPciPKcz = 0x802E19D8;
 	_Z6strcatPKcS0_ = 0x802E1D2C;
+	_Z8mbstowcsPwPKcm = 0x802DF0EC;
 
 	_Z6memsetPvij = 0x800046B4;
 	sprintf__FPcPCce = 0x802E1ACC;
 	snprintf__FPcUlPCce = 0x802E19D8;
 	memcmp__FPCvPCvUi = 0x802DF388;
 	_Z6strcatPKcS0_ = 0x802E1D2C;
+	mbstowcs__FPwPCcUl = 0x802DF0EC;
 
 	_Znaj = 0x802B9350;
 

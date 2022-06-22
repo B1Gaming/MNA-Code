@@ -38,13 +38,6 @@ FlowerCheck:
 	beq true
 	
 	mr r3, r26
-	lis r4, Pa1Chika@h
-	ori r4, r4, Pa1Chika@l
-	bl strcmp
-	cmpwi r3, 0
-	beq true
-	
-	mr r3, r26
 	lis r4, Pa1Kaigan@h
 	ori r4, r4, Pa1Kaigan@l
 	bl strcmp
@@ -54,6 +47,13 @@ FlowerCheck:
 	mr r3, r26
 	lis r4, Pa1KaiganTaiyo@h
 	ori r4, r4, Pa1KaiganTaiyo@l
+	bl strcmp
+	cmpwi r3, 0
+	beq true
+	
+	mr r3, r26
+	lis r4, Pa1KaiganAoi@h
+	ori r4, r4, Pa1KaiganAoi@l
 	bl strcmp
 	cmpwi r3, 0
 	beq true
@@ -106,13 +106,6 @@ FlowerBuild1:
 	beq IsPa1DaishizenPlus
 	
 	mr r3, r26
-	lis r4, Pa1Chika@h
-	ori r4, r4, Pa1Chika@l
-	bl strcmp
-	cmpwi r3, 0
-	beq IsPa1Chika
-	
-	mr r3, r26
 	lis r4, Pa1Kaigan@h
 	ori r4, r4, Pa1Kaigan@l
 	bl strcmp
@@ -125,6 +118,13 @@ FlowerBuild1:
 	bl strcmp
 	cmpwi r3, 0
 	beq IsPa1KaiganTaiyo
+	
+	mr r3, r26
+	lis r4, Pa1KaiganAoi@h
+	ori r4, r4, Pa1KaiganAoi@l
+	bl strcmp
+	cmpwi r3, 0
+	beq IsPa1KaiganAoi
 	
 	mr r3, r26
 	lis r4, Pa1Oashishu@h
@@ -159,15 +159,15 @@ IsPa1DaishizenPlus:
 	li r28, 2
 	b returnFromFlowerBuild1
 
-IsPa1Chika:
+IsPa1Kaigan:
 	li r28, 3
 	b returnFromFlowerBuild1
 
-IsPa1Kaigan:
+IsPa1KaiganTaiyo:
 	li r28, 4
 	b returnFromFlowerBuild1
 
-IsPa1KaiganTaiyo:
+IsPa1KaiganAoi:
 	li r28, 5
 	b returnFromFlowerBuild1
 
@@ -192,11 +192,11 @@ FlowerBuild2:
 	cmpwi r28, 2
 	beq ItsDaishizenPlus
 	cmpwi r28, 3
-	beq ItsChika
-	cmpwi r28, 4
 	beq ItsKaigan
-	cmpwi r28, 5
+	cmpwi r28, 4
 	beq ItsKaiganTaiyo
+	cmpwi r28, 5
+	beq ItsKaiganAoi
 	cmpwi r28, 6
 	beq ItsOashishu
 	cmpwi r28, 7
@@ -223,17 +223,6 @@ ItsDaishizenPlus:
 	bl GetRes
 	b returnFromFlowerBuild2
 
-ItsChika:
-	lis r3, DVDClass@ha
-	lwz r3, DVDClass@l(r3)
-	addi r3, r3, 4
-	lis r4, ObjHana@h
-	ori r4, r4, ObjHana@l
-	lis r5, ObjHanaChi@h
-	ori r5, r5, ObjHanaChi@l
-	bl GetRes
-	b returnFromFlowerBuild2
-
 ItsKaigan:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
@@ -253,6 +242,17 @@ ItsKaiganTaiyo:
 	ori r4, r4, ObjHana@l
 	lis r5, ObjHanaTai@h
 	ori r5, r5, ObjHanaTai@l
+	bl GetRes
+	b returnFromFlowerBuild2
+
+ItsKaiganAoi:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaAoi@h
+	ori r5, r5, ObjHanaAoi@l
 	bl GetRes
 	b returnFromFlowerBuild2
 
@@ -299,11 +299,11 @@ FlowerBuild3:
 	cmpwi r28, 2
 	beq ItsDaishizenPlus3
 	cmpwi r28, 3
-	beq ItsChika3
-	cmpwi r28, 4
 	beq ItsKaigan3
-	cmpwi r28, 5
+	cmpwi r28, 4
 	beq ItsKaiganTaiyo3
+	cmpwi r28, 5
+	beq ItsKaiganAoi3
 	cmpwi r28, 6
 	beq ItsOashishu3
 	cmpwi r28, 7
@@ -329,17 +329,6 @@ ItsDaishizenPlus3:
 	bl GetRes
 	b returnFromFlowerBuild3
 
-ItsChika3:
-	lis r3, DVDClass@ha
-	lwz r3, DVDClass@l(r3)
-	addi r3, r3, 4
-	lis r4, ObjHana@h
-	ori r4, r4, ObjHana@l
-	lis r5, ObjHanaChi@h
-	ori r5, r5, ObjHanaChi@l
-	bl GetRes
-	b returnFromFlowerBuild3
-
 ItsKaigan3:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
@@ -359,6 +348,17 @@ ItsKaiganTaiyo3:
 	ori r4, r4, ObjHana@l
 	lis r5, ObjHanaTai@h
 	ori r5, r5, ObjHanaTai@l
+	bl GetRes
+	b returnFromFlowerBuild3
+
+ItsKaiganAoi3:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjHana@h
+	ori r4, r4, ObjHana@l
+	lis r5, ObjHanaAoi@h
+	ori r5, r5, ObjHanaAoi@l
 	bl GetRes
 	b returnFromFlowerBuild3
 
@@ -403,11 +403,11 @@ FlowerBuild4:
 	cmpwi r28, 2
 	beq ItsDaishizenPlus4
 	cmpwi r28, 3
-	beq ItsChika4
-	cmpwi r28, 4
 	beq ItsKaigan4
-	cmpwi r28, 5
+	cmpwi r28, 4
 	beq ItsKaiganTaiyo4
+	cmpwi r28, 5
+	beq ItsKaiganAoi4
 	cmpwi r28, 6
 	beq ItsOashishu4
 	cmpwi r28, 7
@@ -440,17 +440,6 @@ ItsDaishizenPlus4:
 	bl GetRes
 	b returnFromFlowerBuild4
 
-ItsChika4:
-	lis r3, DVDClass@ha
-	lwz r3, DVDClass@l(r3)
-	addi r3, r3, 4
-	lis r4, ObjKusa@h
-	ori r4, r4, ObjKusa@l
-	lis r5, ObjKusaChi@h
-	ori r5, r5, ObjKusaChi@l
-	bl GetRes
-	b returnFromFlowerBuild4
-
 ItsKaigan4:
 	lis r3, DVDClass@ha
 	lwz r3, DVDClass@l(r3)
@@ -470,6 +459,17 @@ ItsKaiganTaiyo4:
 	ori r4, r4, ObjKusa@l
 	lis r5, ObjKusaTai@h
 	ori r5, r5, ObjKusaTai@l
+	bl GetRes
+	b returnFromFlowerBuild4
+
+ItsKaiganAoi4:
+	lis r3, DVDClass@ha
+	lwz r3, DVDClass@l(r3)
+	addi r3, r3, 4
+	lis r4, ObjKusa@h
+	ori r4, r4, ObjKusa@l
+	lis r5, ObjKusaAoi@h
+	ori r5, r5, ObjKusaAoi@l
 	bl GetRes
 	b returnFromFlowerBuild4
 
@@ -511,27 +511,27 @@ ItsShiroSora4:
 
 # Tilesets go here
 Pa1DaishizenPlus: .string 'Pa1_daishizenplus'
-Pa1Chika: .string 'Pa1_chika'
 Pa1Kaigan: .string 'Pa1_kaigan'
 Pa1KaiganTaiyo: .string 'Pa1_kaigan_taiyo'
+Pa1KaiganAoi: .string 'Pa1_kaigan_aoi'
 Pa1Oashishu: .string 'Pa1_oashishu'
 Pa1Setsugen: .string 'Pa1_setsugen'
 Pa1ShiroSora: .string 'Pa1_shiro_sora'
 
 # Flower brres files go here
 ObjHanaDai: .string 'g3d/obj_hana_daishizen.brres'
-ObjHanaChi: .string 'g3d/obj_hana.brres'
 ObjHanaKai: .string 'g3d/obj_hana.brres'
 ObjHanaTai: .string 'g3d/obj_hana.brres'
+ObjHanaAoi: .string 'g3d/obj_hana.brres'
 ObjHanaOas: .string 'g3d/obj_hana.brres'
 ObjHanaSet: .string 'g3d/obj_hana_kogen.brres'
 ObjHanaKog: .string 'g3d/obj_hana_kogen.brres'
 
 # Grass brres files go here
 ObjKusaDai: .string 'g3d/obj_kusa_daishizen.brres'
-ObjKusaChi: .string 'g3d/obj_kusa_chika.brres'
 ObjKusaKai: .string 'g3d/obj_kusa.brres'
 ObjKusaTai: .string 'g3d/obj_kusa.brres'
+ObjKusaAoi: .string 'g3d/obj_kusa.brres'
 ObjKusaOas: .string 'g3d/obj_kusa.brres'
 ObjKusaSet: .string 'g3d/obj_kusa_kogen.brres'
 ObjKusaKog: .string 'g3d/obj_kusa_kogen.brres'

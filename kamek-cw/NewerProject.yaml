@@ -68,7 +68,7 @@ modules:
   - processed/thundercloud.yaml
   - processed/makeYourOwn.yaml
   - processed/challengeStar.yaml
-  - processed/singAlong.yaml
+#  - processed/singAlong.yaml
   - processed/pumpkinGoomba.yaml
   - processed/snakeblock.yaml
   - processed/cloud.yaml

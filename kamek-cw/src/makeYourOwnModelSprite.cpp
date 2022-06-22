@@ -567,6 +567,51 @@ int dMakeYourOwn::onCreate() {
 
 			// setupAnim("anim38", 1.0); 
 			break;	
+
+		case 53:		// Chestnut Trunk
+
+			setupModel("chestnut", "g3d/trunk_1.brres", "trunk_1"); 
+			SetupTextures_Map(&bodyModel, 0);
+			this->pos.z = 0.0;
+
+			// setupAnim("anim38", 1.0); 
+			break;	
+
+		case 54:		// Chestnut Trunk
+
+			setupModel("chestnut", "g3d/trunk_2.brres", "trunk_2"); 
+			SetupTextures_Map(&bodyModel, 0);
+			this->pos.z = 0.0;
+
+			// setupAnim("anim38", 1.0); 
+			break;	
+
+		case 55:		// Chestnut Trunk
+
+			setupModel("chestnut", "g3d/trunk_3.brres", "trunk_3"); 
+			SetupTextures_Map(&bodyModel, 0);
+			this->pos.z = 0.0;
+
+			// setupAnim("anim38", 1.0); 
+			break;	
+
+		case 56:		// Chestnut Trunk
+
+			setupModel("chestnut", "g3d/trunk_4.brres", "trunk_4"); 
+			SetupTextures_Map(&bodyModel, 0);
+			this->pos.z = 0.0;
+
+			// setupAnim("anim38", 1.0); 
+			break;	
+
+		case 57:		// Chestnut Trunk
+
+			setupModel("chestnut", "g3d/trunk_5.brres", "trunk_5"); 
+			SetupTextures_Map(&bodyModel, 0);
+			this->pos.z = 0.0;
+
+			// setupAnim("anim38", 1.0); 
+			break;	
 	}
 
 	allocator.unlink();

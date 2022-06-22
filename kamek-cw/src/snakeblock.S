@@ -11,8 +11,9 @@ AutoStartSnakeBlock:
 	# Pop stack
 	stwu r1, -0x10(r1)
 	mflr r0
-	stmw r30, 0x8(r1)
 	stw r0, 0x14(r1)
+	stw r31, 0xC(r1)
+	stw r30, 0x8(r1)
 	
 	lwz r3, 4(r4)
 	rlwinm. r3, r3, 8, 31, 31 #(r3 >> 24) & 0x1
@@ -430,7 +431,30 @@ MakeTIBTwiceAsBig:
 .global CreateBackwardsData #r3 is travelInfoBuffer; r25 is totalTravelDistance
 CreateBackwardsData:
 	stb r4, 1(r3) #Restore instruction
+
 	mr r3, r0
+
+	stwu sp, -0x100(sp)
+	mflr r0
+	stw r0, 0x104(sp)
+	stw r31, 0xFC(sp)
+	stw r30, 0xF8(sp)
+	stw r29, 0xF4(sp)
+	stw r28, 0xF0(sp)
+	stw r27, 0xEC(sp)
+	stw r26, 0xE8(sp)
+	stw r25, 0xE4(sp)
+	stw r24, 0xE0(sp)
+	stw r23, 0xDC(sp)
+	stw r22, 0xD8(sp)
+	stw r21, 0xD4(sp)
+	stw r20, 0xD0(sp)
+	stw r19, 0xCC(sp)
+	stw r18, 0xC8(sp)
+	stw r17, 0xC4(sp)
+	stw r16, 0xC0(sp)
+	stw r15, 0xBC(sp)
+	stw r14, 0xB8(sp)
 
 	li r0, 0 #r0 will be our index to the beginning
 	mr r4, r25
@@ -477,7 +501,29 @@ _doLoop:
 	b _startLoop
 
 _endLoop:
-	b continueFromCreateBackwardsData
+	#b continueFromCreateBackwardsData
+	lwz r0, 0x104(sp)
+	lwz r31, 0xFC(sp)
+	lwz r30, 0xF8(sp)
+	lwz r29, 0xF4(sp)
+	lwz r28, 0xF0(sp)
+	lwz r27, 0xEC(sp)
+	lwz r26, 0xE8(sp)
+	lwz r25, 0xE4(sp)
+	lwz r24, 0xE0(sp)
+	lwz r23, 0xDC(sp)
+	lwz r22, 0xD8(sp)
+	lwz r21, 0xD4(sp)
+	lwz r20, 0xD0(sp)
+	lwz r19, 0xCC(sp)
+	lwz r18, 0xC8(sp)
+	lwz r17, 0xC4(sp)
+	lwz r16, 0xC0(sp)
+	lwz r15, 0xBC(sp)
+	lwz r14, 0xB8(sp)
+	mtlr r0
+	addi sp, sp, 0x100
+	blr
 
 
 
