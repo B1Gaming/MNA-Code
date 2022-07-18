@@ -1,0 +1,5 @@
+Worldinfo Editor (Asu-chan)
+	https://github.com/Asu-chan/MariosFinalAdventureWii/tree/clang-no-translations/MFAWWorldInfoEditor/Build
+
+Map Border Editor (LiQ)
+	https://github.com/realLiQ/Koopatlas-View-Map-Feature/tree/main/Map-Border-Editor

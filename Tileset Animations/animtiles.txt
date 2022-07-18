@@ -1,3 +1,11 @@
+texname = belt_conveyor_L_anime.bin
+framedelays = 2, 2, 2, 2, 2, 2, 2, 2
+tilenum = 320
+tileset = 1
+reverse = yes
+
+end tile
+
 texname = ww_300.bin
 framedelays = 4, 4, 4, 4
 tilenum = 768

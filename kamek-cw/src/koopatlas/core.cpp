@@ -185,9 +185,7 @@ bool WMInit_LoadResources2(void *ptr) {
 		OSReport("Load map: %s\n", wm->mapPath);
 	}
 
-	
-
-	if (wm->mapData.load(wm->mapPath)) {
+	if (wm->mapData.load(wm->mapPath) && wm->borderData.load("NewerRes/MapBorders.bin")) {
 		return true;
 	} else
 		return false;
@@ -197,54 +195,6 @@ bool WMInit_SetupWait(void *ptr) {
 	SpammyReport("WMInit_SetupWait called\n");
 	
 	dScKoopatlas_c *wm = (dScKoopatlas_c*)ptr;
-
-	if (!wm->borderLoaded)
-	{
-		// Load borders from files
-		OSReport("Load borders for World %d...\n", wm->currentMapID+1);
-
-		const char* wholeText;
-		char* borderPath;
-		sprintf(borderPath, "/Maps/Borders/W%d.txt", wm->currentMapID+1);
-
-		wholeText = (const char*)LoadFile(&wm->borderFileHandle, borderPath);
-
-		if (wholeText)  // Loaded successfully
-		{
-			//OSReport(wholeText);
-			//OSReport("\n");
-
-			#define isdigit(c) (c >= '0' && c <= '9')
-			for (int i = 0; i < 4; i++){
-                int acc = 0;
-                for(; isdigit(*wholeText); ++wholeText) {
-                    acc *= 10;
-                    acc += *wholeText - '0';
-                }
-    		 	while(!isdigit(*wholeText)){
-                	++wholeText;
-     			}
-                if (i > 1) {
-                    wm->coordinates[i] = -acc;
-                } else {
-                    wm->coordinates[i] = acc;
-                }
-            }
-			
-		}
-		else
-		{
-			OSReport("The following border file could not be loaded: W%d.txt\n", wm->currentMapID+1);
-			wm->coordinates[0] = 0.0;
-			wm->coordinates[1] = 0.0;
-			wm->coordinates[2] = 0.0;
-			wm->coordinates[3] = 0.0;
-		}
-
-		wm->borderLoaded = true;
-		FreeFile(&wm->borderFileHandle);
-		OSReport("Borders loaded successfully!\n");
-	}
 
 	bool success = true;
 
@@ -386,11 +336,6 @@ void dScKoopatlas_c::startMusic() {
 
 
 int dScKoopatlas_c::onCreate() {
-	sfxIsPlaying = false;
-	sfxShouldPlay = false;
-	WMViewerVisible = false;
-	borderLoaded = false;
-
 	OSReport("KP scene settings: %08x\n", settings);
 
 	SpammyReport("onCreate() called\n");
@@ -500,6 +445,12 @@ int dScKoopatlas_c::onCreate() {
 	isGamePaused = false;
 
 	somethingAboutSound(_8042A788);
+	
+	sfxIsPlaying = false;
+	sfxShouldPlay = false;
+	WMViewerVisible = false;
+	
+	coordinatesSet = false;
 
 	return true;
 }
@@ -597,6 +548,18 @@ void dScKoopatlas_c::endState_ContinueWait() {
 bool isHUDVisible = true;
 
 void dScKoopatlas_c::executeState_Normal() {
+
+	if (!coordinatesSet)
+	{
+		for (int i = 0; i < borderData.data->numOfWorlds; i++)
+		{
+			WMBorder.xLeft[i] = borderData.data->world[i].xLeft;
+			WMBorder.xRight[i] = borderData.data->world[i].xRight;
+			WMBorder.yTop[i] = -borderData.data->world[i].yTop;
+			WMBorder.yBottom[i] = -borderData.data->world[i].yBottom;
+		}
+	}
+
 	if (pathManager.completionMessagePending) {
 		OSReport("Going to set CompletionMsg\n");
 		state.setState(&StateID_CompletionMsg);
@@ -652,7 +615,7 @@ void dScKoopatlas_c::executeState_Normal() {
 	}
 	else if (nowPressed & WPAD_B)
 	{
-		OSReport("Pos X/Y Mario: %02d, %02d\n", player->pos.x, player->pos.y);
+		OSReport("Pos X/Y Mario: %02f, %02f\n", player->pos.x, player->pos.y);
 	}
 }
 
@@ -1379,3 +1342,13 @@ void NewerMapDrawFunc() {
 	SetCurrentCameraID(0);
 }
 
+bool dWMBorderData::load(const char* path)
+{
+	void* temp = fileLoader.load(path);
+	fileLoader.unload();
+	if (temp) {
+		this->data = (dWMBorderFile_s*)temp;
+		return true;
+	}
+	return false;
+}

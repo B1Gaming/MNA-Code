@@ -51,6 +51,29 @@ class dWMWSEL_c;
 class dWMStarCoin_c;
 class dWorldCamera_c;
 
+class dWMBorderData
+{
+private:
+	dDvdLoader_c fileLoader;
+	struct dWMBorderWorld_s
+	{
+		u16 xLeft;
+		u16 xRight;
+		u16 yTop;
+		u16 yBottom;
+	};
+	struct dWMBorderFile_s
+	{
+		u32 header;  //K(oopatlas)M(ap)B(order)B(inary)
+		u8 numOfWorlds;
+		dWMBorderWorld_s world[1];
+	};
+public:
+	dWMBorderFile_s *data;
+	bool load(const char* path);
+};
+
+
 class dScKoopatlas_c : public dScene_c {
 	public:
 		dScKoopatlas_c();
@@ -150,14 +173,18 @@ class dScKoopatlas_c : public dScene_c {
 		bool isGamePaused;
 		
 		bool WMViewerVisible;
-		int coordinates[4]; //xLeft, xRight, yTop, yBottom
+		struct WMViewerBorder
+		{
+			float xLeft[4], xRight[4], yTop[4], yBottom[4]; //Array -> number of maps
+		};
+		WMViewerBorder WMBorder;
 
 		bool sfxShouldPlay;
 		bool sfxIsPlaying;
 		nw4r::snd::SoundHandle scrollHandle;
 
-		bool borderLoaded;
-		FileHandle borderFileHandle;
+		dWMBorderData borderData;
+		bool coordinatesSet;
 };
 
 extern void *_8042A788;
